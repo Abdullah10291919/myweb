@@ -6,10 +6,17 @@ class Home extends BaseController
 {
     public function index()
     {
-        // return "hello ";
+       
         echo view('header/header');
         echo view('index');
   
-        // return view('welcome_message');
+        
     }
+
+    
+	public function latestmovies(){
+		 
+		echo view('header/header');
+		 echo view('movie-grid');
+	}
 }

@@ -582,7 +582,7 @@
 
 
                     <div class="col-md-4 col-sm-12 align-self-center text-right">
-                        <a href="#" class="btn btn-icon btn-main btn-effect">
+                        <a href="<?php echo base_url() ?>latestmovies" class="btn btn-icon btn-main btn-effect">
                             view all
                             <i class="ti-angle-double-right"></i>
                         </a>
