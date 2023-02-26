@@ -32,8 +32,13 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 
 $routes->get('/latestmovies' , 'Home::latestmovies');
+$routes->get('/contactus' , 'Home::contactus');
+$routes->get('/contact-us' , 'Home::contactus');
+ 
+ 
+$routes->get('/login-register' , 'Home::loginregister');
 
-
+$routes->get('/testimonials' , 'Home::testimonials');
 $routes->get('/upcomming' , 'Movies::upcomming');
 $routes->get('/latest' , 'Movies::latest');
 $routes->get('/tvshows' , 'Movies::tvshows');

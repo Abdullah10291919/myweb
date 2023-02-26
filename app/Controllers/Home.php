@@ -19,4 +19,23 @@ class Home extends BaseController
 		echo view('header/header');
 		 echo view('movie-grid');
 	}
+
+
+    function contactus(){
+	 echo view('header/header');
+	echo  view('contact-us');
+	}
+
+	function comingsoon(){
+	 
+	echo view('coming-soon');
+	}
+	function loginregister(){
+		 
+	 echo view('login-register');
+	}
+	function testimonials(){
+	echo view('header/header');
+	echo view('testimonials');
+	}
 }
