@@ -33,6 +33,14 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/latestmovies' , 'Home::latestmovies');
 
+
+$routes->get('/upcomming' , 'Movies::upcomming');
+$routes->get('/latest' , 'Movies::latest');
+$routes->get('/tvshows' , 'Movies::tvshows');
+$routes->get('/mostwatched' , 'Movies::mostwatched');
+$routes->get('/details' , 'Movies::details');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
