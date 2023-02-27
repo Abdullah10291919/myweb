@@ -46,6 +46,19 @@ $routes->get('/mostwatched' , 'Movies::mostwatched');
 $routes->get('/details' , 'Movies::details');
 
 
+
+$routes->get('/admins' , 'Admin::login');
+$routes->post('/admins' , 'Admin::login');
+$routes->get('/signup' , 'Admin::signup');
+$routes->post('/signup' , 'Admin::signup');
+
+
+// $routes->get('/registration' , 'Admin::registration');
+// $routes->get('/addcatogery' , 'Admin::addcatogery');
+// $routes->get('/catogery' , 'Admin::catogery');
+$routes->get('/dashboard' , 'Admin::dashboard');
+ 
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
