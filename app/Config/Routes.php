@@ -52,7 +52,8 @@ $routes->post('/admins' , 'Admin::login');
 $routes->get('/signup' , 'Admin::signup');
 $routes->post('/signup' , 'Admin::signup');
 
-
+$routes->get('/add_movies' , 'Admin::addmovies');
+$routes->post('/addMoviesdata' , 'Admin::addmovies');
 // $routes->get('/registration' , 'Admin::registration');
 // $routes->get('/addcatogery' , 'Admin::addcatogery');
 // $routes->get('/catogery' , 'Admin::catogery');

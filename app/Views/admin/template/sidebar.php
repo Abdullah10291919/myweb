@@ -19,7 +19,7 @@
                   </li>
                   <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="airplay"></i><span>Add Movie</span></a>
                     <ul class="nav-submenu menu-content">
-                      <li><a href="general-widget.html">Add New Movie</a></li>
+                      <li><a href="<?php echo base_url(); ?>add_movies">Add New Movie</a></li>
                      
                     </ul>
                   </li>

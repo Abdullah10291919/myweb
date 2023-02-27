@@ -102,16 +102,38 @@ class Admin extends BaseController {
     //     }
     // }
 
-    function movies(){
+    function addmovies(){
         $adminModel = new AdminModel();
-            if(isset($_POST['moviesadd'])){
+            if(isset($_POST['movietitle'])){
 
+                
+
+              try{
+                $res =  $adminModel.insert($_POST);
+              }catch(Exception $ex){
+                echo $ex.message;
+              }
+
+               if( $res ){
+                $data = array(
+                    success => true,
+                    message => 'Record Added Successfully'
+                );
+                echo json_encode($data);
+               }else{
+                $data = array(
+                    success => false,
+                    message => 'Try Again!'
+                );
+                echo json_encode($data);
+               }
+                exit;
             }
 
              echo view('admin/template/header');
              echo view('admin/template/sidebar');
              echo view('admin/addMovies');
-            echo view('admin/template/footer');
+             echo view('admin/template/footer');
       
 
 

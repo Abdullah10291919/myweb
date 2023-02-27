@@ -1,17 +1,19 @@
 
         <!-- Page Sidebar Ends-->
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
         <div class="page-body">
           <div class="container-fluid">
             <div class="page-header dash-breadcrumb">
               <div class="row">
                 <div class="col-6">                              
-                  <h3 class="f-w-600">Catogery</h3>
+                  <h3 class="f-w-600">Movies</h3>
                 </div>
                 <div class="col-6">
                   <div class="breadcrumb-sec">
                     <ul class="breadcrumb">
                       <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
-                      <li class="breadcrumb-item">Add catogery</li>
+                      <li class="breadcrumb-item">Add Movies</li>
  
                     </ul>
                   </div>
@@ -25,33 +27,75 @@
              <div class="col-sm-12">
                 <div class="card">
                     <div class="col-sm-4">
-
-                    <?php if($this->session->flashdata('message')){
-                            $messageType = $this->session->flashdata('message');
-                                if($messageType == 'success'){ ?>
-                        <div class="alert alert-success dark alert-dismissible fade show" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>           
-                      <p>Catogery added successfully</p>
-                      <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                              <?php   }else{ ?>
-                                <div class="alert alert-warning dark alert-dismissible fade show" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>           
-                      <p>Some thing wrong, Try again.</p>
-                      <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                               <?php  }
-                    } ?>
+ 
                     
                     </div>
                   <div class="card-header pb-0">
-                    <h5>Add catogery</h5>
+                    <h5>Add Movies</h5>
                   </div>
-                  <form class="form theme-form" method="post" action="<?php echo base_url()?>addcatogery">
+                  <form class="form theme-form" id="moviesadd" name="moviesadd" onSubmit="return checkmethod()"  method="post"   action="#">
                     <div class="card-body">
                       <div class="row">
-                        <div class="col">
+                        <div class="col-4">
                           <div class="mb-3">
-                            <label class="form-label" for="catogeryTitle">Title</label>
-                            <input class="form-control" id="catogeryTitle" name="catogeryTitle" type="text" placeholder="Action, horror, thrill">
+                            <label class="form-label" for="movietitle">Title</label>
+                            <input class="form-control" required id="movietitle" name="movietitle" type="text" placeholder="Please Enter the Title of the Movie">
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="Director">Director</label>
+                            <input class="form-control " required id="Director" name="Director" type="text" placeholder="Please Enter the Director">
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="Duration">Duration </label>
+                            <input class="form-control" required id="Duration" name="Duration" type="text" placeholder="Please Enter the Duration like 2h 30m">
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="Genre">Genre </label>
+                            <input class="form-control" required id="Genre" name="Genre" type="text" placeholder="horror,action,thrill etc">
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="Budget">Budget</label>
+                            <input class="form-control" required id="Budget" name="Budget" type="text" placeholder="Please Enter the Budget">
+                          </div>
+                        </div>
+                        <div class="col-10">
+                          <div class="mb-3">
+                            <label class="form-label" for="movieStoryLine">Story Line</label>.
+                            <textarea  class="form-control" required id="movieStoryLine" name="moviesStoryLine" 
+                             placeholder="Please Enter the Title of the Movie"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="Country">Country</label>
+                            <input class="form-control" required id="Country" name="Country" type="text" placeholder="Please Enter the Country">
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="Language">Language</label>
+                            <input class="form-control" required id="Language" name="Language" type="text" placeholder="Please Enter the Language">
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="ProductionCo">Production Co</label>
+                            <input class="form-control" required id="ProductionCo" name="ProductionCo" type="text" placeholder="Please Enter the Production Co">
+                          </div>
+                        </div>
+                       
+                        <div class="col-6">
+                          <div class="mb-3">
+                            
+                            <input class="btn btn-success" id="submitbutton" name="submitbutton" type="submit" value="Submit">
                           </div>
                         </div>
                       </div>
@@ -70,4 +114,47 @@
           </div>
           <!-- Container-fluid Ends-->
         </div>
+         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+        <script>
+             
+ 
+                function checkmethod(){
+                  
+
+                    
+                      $.ajax({
+                            type: "POST",
+                            url: "<?php echo base_url() ?>addMoviesdata",
+                            data: $('#moviesadd').serialize() ,
+                            dataType:'json',
+                            success: function(response) {
+                            // show success message and hide form
+                               response = JSON.parse(message);
+                           
+                               if(response.success){
+                                Swal.fire(
+                                    'Success',
+                                    response.message,
+                                    'success'
+                                  )
+                                  return false;
+                               }
+                               Swal.fire(
+                                    'error',
+                                    response.message,
+                                    'error'
+                                )
+
+                            return false;
+                            },
+                            error: function() {
+                            // handle errors
+                            alert("Error submitting form!");
+                            }
+                        });
+                    return false;
+                }
+
+         </script>
       
