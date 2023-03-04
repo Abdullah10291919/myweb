@@ -101,29 +101,56 @@ class Admin extends BaseController {
 
     //     }
     // }
-
+    public static function slugify($text, string $divider = '-')
+    {
+      // replace non letter or digits by divider
+      $text = preg_replace('~[^\pL\d]+~u', $divider, $text);
+    
+      // transliterate
+      $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+    
+      // remove unwanted characters
+      $text = preg_replace('~[^-\w]+~', '', $text);
+    
+      // trim
+      $text = trim($text, $divider);
+    
+      // remove duplicate divider
+      $text = preg_replace('~-+~', $divider, $text);
+    
+      // lowercase
+      $text = strtolower($text);
+    
+      if (empty($text)) {
+        return 'n-a';
+      }
+    
+      return $text;
+    }
     function addmovies(){
         $adminModel = new AdminModel();
-            if(isset($_POST['movietitle'])){
+            if(isset($_POST['title'])){
 
                 
-
-              try{
-                $res =  $adminModel.insert($_POST);
+              
+               $_POST['slug'] = $this->slugify($_POST['title']);
+              
+               try{
+                $res =  $adminModel->insert($_POST);
               }catch(Exception $ex){
-                echo $ex.message;
+                print_r($ex) ;
               }
-
+              
                if( $res ){
                 $data = array(
-                    success => true,
-                    message => 'Record Added Successfully'
+                    "success" => true,
+                    "message" => 'Record Added Successfully'
                 );
                 echo json_encode($data);
                }else{
                 $data = array(
-                    success => false,
-                    message => 'Try Again!'
+                    "success" => false,
+                    "message" => 'Try Again!'
                 );
                 echo json_encode($data);
                }

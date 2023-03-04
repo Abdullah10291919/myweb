@@ -140,6 +140,7 @@
                         <h2 class="title">Latest Movies</h2>
                     </div>
 
+                  
 
                     <div class="col-md-4 align-self-center text-right">
                         <a href="<?php echo base_url() ?>latestmovies" class="btn btn-icon btn-main btn-effect">
@@ -155,241 +156,32 @@
                 <div class="owl-carousel latest-movies-slider mt20">
 
                     <!-- === Start of Sliding Item 1 === -->
-                    <div class="item">
-                        <!-- Start of Movie Box -->
-                        <div class="movie-box-1">
-
-                            <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="<?php echo base_url(); ?>assets/images/posters/poster-1.jpg" alt="">
-                            </div>
-                            <!-- End of Poster -->
-
-                            <!-- Start of Buttons -->
-                            <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                            <!-- End of Buttons -->
-
-                            <!-- Start of Movie Details -->
-                            <div class="movie-details">
-                                <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">Star Wars</a>
-                                </h4>
-                                <span class="released">14 Dec 2017</span>
-                            </div>
-                            <!-- End of Movie Details -->
-
-                            <!-- Start of Rating -->
-                            <div class="stars">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                                <span>7.5 / 10</span>
-                            </div>
-                            <!-- End of Rating -->
-
-                        </div>
-                        <!-- End of Movie Box -->
-                    </div>
+                  
                     <!-- === End of Sliding Item 1 === -->
 
 
                     <!-- === Start of Sliding Item 2 === -->
-                    <div class="item">
-                        <!-- Start of Movie Box -->
-                        <div class="movie-box-1">
-
-                            <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="<?php echo base_url(); ?>assets/images/posters/poster-2.jpg" alt="">
-                            </div>
-                            <!-- End of Poster -->
-
-                            <!-- Start of Buttons -->
-                            <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                            <!-- End of Buttons -->
-
-                            <!-- Start of Movie Details -->
-                            <div class="movie-details">
-                                <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">The Brain</a>
-                                </h4>
-                                <span class="released">20 Dec 2017</span>
-                            </div>
-                            <!-- End of Movie Details -->
-
-                            <!-- Start of Rating -->
-                            <div class="stars">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                                <span>7.2 / 10</span>
-                            </div>
-                            <!-- End of Rating -->
-
-                        </div>
-                        <!-- End of Movie Box -->
-                    </div>
+                   
                     <!-- === End of Sliding Item 2 === -->
 
 
                     <!-- === Start of Sliding Item 3 === -->
-                    <div class="item">
-                        <!-- Start of Movie Box -->
-                        <div class="movie-box-1">
-
-                            <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="<?php echo base_url(); ?>assets/images/posters/poster-3.jpg" alt="">
-                            </div>
-                            <!-- End of Poster -->
-
-                            <!-- Start of Buttons -->
-                            <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                            <!-- End of Buttons -->
-
-                            <!-- Start of Movie Details -->
-                            <div class="movie-details">
-                                <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">The Mummy</a>
-                                </h4>
-                                <span class="released">9 Jun 2017</span>
-                            </div>
-                            <!-- End of Movie Details -->
-
-                            <!-- Start of Rating -->
-                            <div class="stars">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                                <span>5.5 / 10</span>
-                            </div>
-                            <!-- End of Rating -->
-
-                        </div>
-                        <!-- End of Movie Box -->
-                    </div>
+                     
                     <!-- === End of Sliding Item 3 === -->
 
 
                     <!-- === Start of Sliding Item 4 === -->
-                    <div class="item">
-                        <!-- Start of Movie Box -->
-                        <div class="movie-box-1">
-
-                            <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="<?php echo base_url(); ?>assets/images/posters/poster-4.jpg" alt="">
-                            </div>
-                            <!-- End of Poster -->
-
-                            <!-- Start of Buttons -->
-                            <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                            <!-- End of Buttons -->
-
-                            <!-- Start of Movie Details -->
-                            <div class="movie-details">
-                                <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">The Parrot</a>
-                                </h4>
-                                <span class="released">20 Jan 2017</span>
-                            </div>
-                            <!-- End of Movie Details -->
-
-                            <!-- Start of Rating -->
-                            <div class="stars">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                                <span>5.2 / 10</span>
-                            </div>
-                            <!-- End of Rating -->
-
-                        </div>
-                        <!-- End of Movie Box -->
-                    </div>
+                   
                     <!-- === End of Sliding Item 4 === -->
 
 
                     <!-- === Start of Sliding Item 5 === -->
-                    <div class="item">
-                        <!-- Start of Movie Box -->
-                        <div class="movie-box-1">
-
-                            <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="<?php echo base_url(); ?>assets/images/posters/poster-1.jpg" alt="">
-                            </div>
-                            <!-- End of Poster -->
-
-                            <!-- Start of Buttons -->
-                            <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                            <!-- End of Buttons -->
-
-                            <!-- Start of Movie Details -->
-                            <div class="movie-details">
-                                <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">Star Wars</a>
-                                </h4>
-                                <span class="released">14 Dec 2017</span>
-                            </div>
-                            <!-- End of Movie Details -->
-
-                            <!-- Start of Rating -->
-                            <div class="stars">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                                <span>7.5 / 10</span>
-                            </div>
-                            <!-- End of Rating -->
-
-                        </div>
-                        <!-- End of Movie Box -->
-                    </div>
+                     
                     <!-- === End of Sliding Item 5 === -->
 
 
                     <!-- === Start of Sliding Item 6 === -->
+                    <?php foreach($latestmovies as $key => $moviel) {?>
                     <div class="item">
                         <!-- Start of Movie Box -->
                         <div class="movie-box-1">
@@ -411,9 +203,9 @@
                             <!-- Start of Movie Details -->
                             <div class="movie-details">
                                 <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">The Brain</a>
+                                    <a href="<?php echo base_url() ?>details"><?= $moviel['title']; ?></a>
                                 </h4>
-                                <span class="released">20 Dec 2017</span>
+                                <span class="released"><?= $moviel['release_Date']; ?></span>
                             </div>
                             <!-- End of Movie Details -->
 
@@ -426,13 +218,14 @@
                                     <i class="fa fa-star-half-o"></i>
                                     <i class="fa fa-star-o"></i>
                                 </div>
-                                <span>7.2 / 10</span>
+                                <span><?= $moviel['rating']; ?> / 10</span>
                             </div>
                             <!-- End of Rating -->
 
                         </div>
                         <!-- End of Movie Box -->
                     </div>
+                    <?php } ?>
                     <!-- === End of Sliding Item 6 === -->
 
                 </div>
@@ -885,108 +678,7 @@
 
 
 
-        <!-- =============== START OF HOW IT WORKS SECTION =============== -->
-        <section class="how-it-works bg-light ptb100">
-            <div class="container">
-
-                <!-- Start of row -->
-                <div class="row justify-content-center">
-                    <div class="col-md-7 text-center">
-                        <h2 class="title">How it works?</h2>
-                        <h6 class="subtitle">We will show you step by step how to start watching your favorite movies & tv shows starting now!</h6>
-                    </div>
-                </div>
-                <!-- End of row -->
-
-
-                <!-- Start of Timeline -->
-                <div class="timeline">
-
-                    <span class="main-line"></span>
-
-                    <!-- === Start of Timeline Step 1 === -->
-                    <div class="timeline-step row">
-                        <span class="timeline-step-btn">Step 1</span>
-
-                        <!-- Start of Timeline Text -->
-                        <div class="col-md-6 col-sm-12 timeline-text-wrapper">
-                            <div class="timeline-text">
-                                <h3>Create an account</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <!-- End of Timeline Text -->
-
-                        <!-- Start of Timeline Image -->
-                        <div class="col-md-6 col-sm-12 timeline-image-wrapper">
-                            <div class="timeline-image">
-                                <img src="<?php echo base_url(); ?>assets/images/other/signup.png" alt="">
-                            </div>
-                        </div>
-                        <!-- End of Timeline Image -->
-
-                    </div>
-                    <!-- === End of Timeline Step 1 === -->
-
-
-                    <!-- === Start of Timeline Step 2 === -->
-                    <div class="timeline-step row">
-                        <span class="timeline-step-btn" style="color: #2a7bc2; background: #c1ddf5;">Step 2</span>
-
-                        <!-- Start of Timeline Image -->
-                        <div class="col-md-6 col-sm-12 timeline-image-wrapper">
-                            <div class="timeline-image">
-                                <img src="<?php echo base_url(); ?>assets/images/other/pricing.png" alt="">
-                            </div>
-                        </div>
-                        <!-- End of Timeline Image -->
-
-                        <!-- Start of Timeline Text -->
-                        <div class="col-md-6 col-sm-12 timeline-text-wrapper">
-                            <div class="timeline-text-right">
-                                <h3>Choose your Plan</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <!-- End of Timeline Text -->
-
-                    </div>
-                    <!-- === End of Timeline Step 2 === -->
-
-
-                    <!-- === Start of Timeline Step 3 === -->
-                    <div class="timeline-step row">
-                        <span class="timeline-step-btn" style="color: #eb305f; background: #f9c8d4;">Step 3</span>
-
-                        <!-- Start of Timeline Text -->
-                        <div class="col-md-6 col-sm-12 timeline-text-wrapper">
-                            <div class="timeline-text">
-                                <h3>Enjoy Movify</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <!-- End of Timeline Text -->
-
-                        <!-- Start of Timeline Image -->
-                        <div class="col-md-6 col-sm-12 timeline-image-wrapper">
-                            <div class="timeline-image">
-                                <img src="<?php echo base_url(); ?>assets/images/other/enjoy-movify.png" alt="">
-                            </div>
-                        </div>
-                        <!-- End of Timeline Image -->
-
-                    </div>
-                    <!-- === End of Timeline Step 3 === -->
-
-                </div>
-                <!-- End of Timeline -->
-
-            </div>
-        </section>
-        <!-- =============== END OF HOW IT WORKS SECTION =============== -->
-
-
-
+       
 
         <!-- =============== END OF COUNTER SECTION =============== -->
         <section class="counter bg-main-gradient ptb50 text-center">
@@ -1019,161 +711,7 @@
 
 
 
-        <!-- =============== END OF BECOME PREMIUM SECTION =============== -->
-        <section class="become-premium ptb100">
-            <div class="container">
-                <div class="row">
-
-
-                    <div class="col-md-5 col-sm-12 mb50">
-                        <h3 class="title">Become a Premium Member</h3>
-                        <h6 class="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.</h6>
-                    </div>
-
-
-                    <div class="col-md-7 col-sm-12">
-
-                        <!-- Start of Pricing Table -->
-                        <div class="pricing-table-1">
-
-                            <!-- ===== Start of Featured Holder ===== -->
-                            <div class="features-holder">
-                                <div class="features-title">
-                                    <h5>What You Get</h5>
-                                </div>
-
-                                <!-- Start of Features List -->
-                                <div class="features-list-wrapper">
-                                    <ul class="features-list">
-
-                                        <!-- List Item -->
-                                        <li>
-                                            <h6>HD available</h6>
-                                        </li>
-
-                                        <!-- List Item -->
-                                        <li>
-                                            <h6>Ultra HD available</h6>
-                                        </li>
-
-                                        <!-- List Item -->
-                                        <li>
-                                            <h6>Unlimited Movies and TV shows</h6>
-                                        </li>
-
-                                        <!-- List Item -->
-                                        <li>
-                                            <h6>Watch on your phone & tablet</h6>
-                                        </li>
-
-                                        <!-- List Item -->
-                                        <li>
-                                            <h6>Download and watch offline</h6>
-                                        </li>
-
-                                        <!-- List Item -->
-                                        <li>
-                                            <h6>Screens you can watch</h6>
-                                        </li>
-
-                                        <!-- List Item -->
-                                        <li>
-                                            <h6>First Month Free</h6>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- Start of Features List -->
-
-                            </div>
-                            <!-- ===== End of Featured Holder ===== -->
-
-
-                            <!-- ===== Start of Price Table Featured ===== -->
-                            <div class="price-table price-table-featured">
-
-                                <!-- Start of Table Header -->
-                                <div class="table-header">
-                                    <h5>Premium</h5>
-                                </div>
-                                <!-- End of Table Header -->
-
-                                <!-- Start Table Content -->
-                                <div class="table-content">
-                                    <ul>
-                                        <li><i class="fa fa-check"></i></li>
-                                        <li><i class="fa fa-check"></i></li>
-                                        <li><i class="fa fa-check"></i></li>
-                                        <li><i class="fa fa-check"></i></li>
-                                        <li><i class="fa fa-check"></i></li>
-                                        <li>5</li>
-                                        <li><i class="fa fa-check"></i></li>
-                                    </ul>
-                                </div>
-                                <!-- End Table Content -->
-
-                                <!-- Start Table Footer -->
-                                <div class="table-footer">
-                                    <div class="price-holder">
-                                        <span class="currency">$</span>
-                                        <span class="price">19.99</span>
-                                        <span class="time">/ mon</span>
-                                    </div>
-                                    <a href="#" target="_self" class="btn btn-main btn-effect"><i class="fa fa-shopping-cart"></i></a>
-                                </div>
-                                <!-- End Table Footer -->
-
-                            </div>
-                            <!-- ===== End of Price Table Featured ===== -->
-
-
-                            <!-- ===== Start of Price Table ===== -->
-                            <div class="price-table">
-
-                                <!-- Start of Table Header -->
-                                <div class="table-header">
-                                    <h5>Basic</h5>
-                                </div>
-                                <!-- End of Table Header -->
-
-                                <!-- Start Table Content -->
-                                <div class="table-content">
-                                    <ul>
-                                        <li><i class="fa fa-check"></i></li>
-                                        <li><i class="fa fa-times"></i></li>
-                                        <li><i class="fa fa-check"></i></li>
-                                        <li><i class="fa fa-times"></i></li>
-                                        <li><i class="fa fa-times"></i></li>
-                                        <li>1</li>
-                                        <li><i class="fa fa-check"></i></li>
-                                    </ul>
-                                </div>
-                                <!-- End Table Content -->
-
-                                <!-- Start Table Footer -->
-                                <div class="table-footer">
-                                    <div class="price-holder">
-                                        <span class="currency">$</span>
-                                        <span class="price">9.99</span>
-                                        <span class="time">/ mon</span>
-                                    </div>
-                                    <a href="#" target="_self" class="btn btn-main btn-effect"><i class="fa fa-shopping-cart"></i></a>
-                                </div>
-                                <!-- End Table Footer -->
-
-                            </div>
-                            <!-- ===== End of Price Table ===== -->
-
-                        </div>
-                        <!-- End of Pricing Table -->
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!-- =============== END OF BECOME PREMIUM SECTION =============== -->
-
-
+       
 
 
         <!-- =============== END OF BLOG SECTION =============== -->

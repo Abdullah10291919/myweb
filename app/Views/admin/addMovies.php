@@ -33,13 +33,14 @@
                   <div class="card-header pb-0">
                     <h5>Add Movies</h5>
                   </div>
-                  <form class="form theme-form" id="moviesadd" name="moviesadd" onSubmit="return checkmethod()"  method="post"   action="#">
+                  <!-- <?php echo base_url() ?>addMoviesdata -->
+                  <form class="form theme-form" id="moviesadd" onSubmit="return checkmethod()" name="moviesadd" method="POST"   action="#">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-4">
                           <div class="mb-3">
-                            <label class="form-label" for="movietitle">Title</label>
-                            <input class="form-control" required id="movietitle" name="movietitle" type="text" placeholder="Please Enter the Title of the Movie">
+                            <label class="form-label" for="title">Title</label>
+                            <input class="form-control" required id="title" name="title" type="text" placeholder="Please Enter the Title of the Movie">
                           </div>
                         </div>
                         <div class="col-4">
@@ -52,6 +53,20 @@
                           <div class="mb-3">
                             <label class="form-label" for="Duration">Duration </label>
                             <input class="form-control" required id="Duration" name="Duration" type="text" placeholder="Please Enter the Duration like 2h 30m">
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="catogery">Catogery </label>
+                            <select class="form-control" id="catogery" name="catogery">
+                                <option value="1">Up Comming</option>
+                                <option value="2">Latest Movies</option>
+                                <option value="5">TV shows</option>
+                                <option value="3">Most watched</option>
+                                <option value="4">Most liked</option>
+
+                               
+                            </select>
                           </div>
                         </div>
                         <div class="col-4">
@@ -91,7 +106,19 @@
                             <input class="form-control" required id="ProductionCo" name="ProductionCo" type="text" placeholder="Please Enter the Production Co">
                           </div>
                         </div>
-                       
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="release_Date">Release Date</label>
+                            <input class="form-control" required id="release_Date" name="release_Date" type="date" placeholder="Please Enter the Release Date">
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="rating">Rating</label>
+                            <input class="form-control" required id="rating" name="rating" min="1"  max="5" type="number" placeholder="Please Enter the Rating">
+                          </div>
+                        </div>
+                        
                         <div class="col-6">
                           <div class="mb-3">
                             
@@ -100,10 +127,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="card-footer pt-0 text-end">
-                      <button class="btn btn-primary" type="submit">Add</button>
-                      <input class="btn btn-light" type="reset" value="Cancel">
-                    </div>
+                     
                   </form>
                 </div>
                  
@@ -122,6 +146,8 @@
                 function checkmethod(){
                   
 
+
+                   
                     
                       $.ajax({
                             type: "POST",
@@ -130,7 +156,9 @@
                             dataType:'json',
                             success: function(response) {
                             // show success message and hide form
-                               response = JSON.parse(message);
+                            console.log(response);
+                            
+                            //    response = JSON.parse(response);
                            
                                if(response.success){
                                 Swal.fire(
@@ -138,6 +166,7 @@
                                     response.message,
                                     'success'
                                   )
+                                  $('.form-control').val('');
                                   return false;
                                }
                                Swal.fire(

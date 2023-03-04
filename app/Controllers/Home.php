@@ -1,13 +1,18 @@
 <?php
 
 namespace App\Controllers;
-
+use App\Models\UserModel;
+use App\Models\AdminModel;
 class Home extends BaseController
 {
     public function index()
     {
        
-        echo view('header/header');
+        $data = array();
+        $adminModel = new AdminModel();
+        $res =   $adminModel->where('catogery' , 2)->limit(8)->findall();
+        $data['latestmovies'] = $res;
+        echo view('header/header' , $data);
         echo view('index');
   
         

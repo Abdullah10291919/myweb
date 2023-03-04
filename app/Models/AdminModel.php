@@ -7,18 +7,24 @@ class AdminModel extends Model
     protected $table = 'movies';
 
     protected $primaryKey = 'id';
+    // title,
+    // Budget
+    		
 
-    // protected $allowedFields = ['first_name','last_name','role','username', 'email', 'password'];
+    protected $allowedFields = ['title','Budget','Country',
+    'Director', 'Duration', 'Genre' , 'Language' , 'ProductionCo' 
+    ,'moviesStoryLine', 'movietitle', 'catogery_id', 'created_date' ,
+     'updated_date' , 'image_url' , 'catogery' ,'release_Date' , 'slug' ];
 
-    // protected $validationRules = [
+    protected $validationRules = [
       
-    //     'username' => 'required|min_length[3]|max_length[30]',
-    //     'email' => 'required|valid_email',
-    //     'password' => 'required|min_length[8]',
-    // ];
+        'title' => 'required|max_length[30]',
+        'Budget' => 'required',
+        'Country' => 'required',
+    ];
 
-    // protected $default = [
-    //     'active' => 1,
-    //     'deleted' => 0,
-    // ];
+    protected $default = [
+        'active' => 1,
+        'deleted' => 0,
+    ];
 }
