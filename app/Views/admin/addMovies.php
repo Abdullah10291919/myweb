@@ -59,7 +59,7 @@
                           <div class="mb-3">
                             <label class="form-label" for="catogery">Catogery </label>
                             <select class="form-control" id="catogery" name="catogery">
-                                <option value="1">Up Comming</option>
+                                <option value="1">Up Coming</option>
                                 <option value="2">Latest Movies</option>
                                 <option value="5">TV shows</option>
                                 <option value="3">Most watched</option>
@@ -73,6 +73,12 @@
                           <div class="mb-3">
                             <label class="form-label" for="Genre">Genre </label>
                             <input class="form-control" required id="Genre" name="Genre" type="text" placeholder="horror,action,thrill etc">
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="mb-3">
+                            <label class="form-label" for="video_url">Video URL </label>
+                            <input class="form-control" required id="video_url" name="video_url" type="text" placeholder="Please add youtube video url for this movie">
                           </div>
                         </div>
                         <div class="col-4">

@@ -10,7 +10,7 @@ class Home extends BaseController
        
         $data = array();
         $adminModel = new AdminModel();
-        $res =   $adminModel->where('catogery' , 2)->limit(8)->findall();
+        $res =   $adminModel->where('catogery' , 2)->limit(50)->findall();
         $data['latestmovies'] = $res;
         echo view('header/header' , $data);
         echo view('index');

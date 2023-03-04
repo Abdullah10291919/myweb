@@ -194,7 +194,7 @@
 
                             <!-- Start of Buttons -->
                             <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
+                                <a href="<?php echo $moviel['video_url'] ?>" class="play-video">
                                     <i class="fa fa-play"></i>
                                 </a>
                             </div>

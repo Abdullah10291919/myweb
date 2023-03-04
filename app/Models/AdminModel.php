@@ -14,7 +14,7 @@ class AdminModel extends Model
     protected $allowedFields = ['title','Budget','Country',
     'Director', 'Duration', 'Genre' , 'Language' , 'ProductionCo' 
     ,'moviesStoryLine', 'movietitle', 'catogery_id', 'created_date' ,
-     'updated_date' , 'image_url' , 'catogery' ,'release_Date' , 'slug' ];
+     'updated_date' , 'image_url' , 'catogery' ,'release_Date' , 'slug' , 'video_url' ];
 
     protected $validationRules = [
       
