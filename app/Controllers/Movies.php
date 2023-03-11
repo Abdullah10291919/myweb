@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Controllers;
-
+use App\Models\UserModel;
+use App\Models\AdminModel;
 class Movies extends BaseController
 {
     
@@ -28,9 +29,23 @@ class Movies extends BaseController
         echo view('movie-grid');
 	}
     
-    public function details(){
-        echo view('header/header');
-		echo view('movie-detail');
+    public function details($movieID = ''){
+
+			
+		if(isset($_GET['id'])){
+			$data = array();
+			$adminModel = new AdminModel();
+			$latestmovies =   $adminModel->where('id' , $_GET['id'])->first();
+		   
+	 
+		    
+			$data['movieData'] = $latestmovies;
+			  
+			 
+			echo view('header/header',$data);
+			echo view('movie-detail',$data);
+		}
+		
     }
  
 }

@@ -43,6 +43,7 @@ $routes->get('/upcomming' , 'Movies::upcomming');
 $routes->get('/latest' , 'Movies::latest');
 $routes->get('/tvshows' , 'Movies::tvshows');
 $routes->get('/mostwatched' , 'Movies::mostwatched');
+// $routes->get('/details/(:any)' , 'Movies::details/$1');
 $routes->get('/details' , 'Movies::details');
 
 
@@ -60,6 +61,10 @@ $routes->post('/addMoviesdata' , 'Admin::addmovies');
 $routes->get('/dashboard' , 'Admin::dashboard');
  
 
+
+//Api for home screen
+
+$routes->get('/v1/api/latestmovies' , 'HomeMovie::latestmovies');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

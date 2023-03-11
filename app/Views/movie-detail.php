@@ -22,13 +22,13 @@
 
 
                         <div class="movie-details">
-                            <h3 class="title">Star Wars: The Movie</h3>
+                            <h3 class="title"><?= $movieData['title'] ?></h3>
 
                             <ul class="movie-subtext">
                                 <li>PG-13</li>
                                 <li>2h 32min</li>
-                                <li>Action, Adventure, Fantasy</li>
-                                <li>15 December 2017 (USA)</li>
+                                <li><?= $movieData['Genre'] ?></li>
+                                <li><?= $movieData['release_Date'] ?> <?= $movieData['Country'] ?></li>
                             </ul>
 
                             <a href="#" class="btn btn-main btn-effect">trailer</a>
@@ -41,7 +41,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-o"></i>
-                                <span>296 Ratings</span>
+                                <span><?php echo $movieData['rating'] ?> / 10 Ratings</span>
                             </div>
                         </div>
 
@@ -67,7 +67,7 @@
                             <div class="storyline">
                                 <h3 class="title">Storyline</h3>
 
-                                <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Cras suscipit, quam vitae adipiscing faucibus, risus nibh laoreet odio, a porttitor metus eros ut enim. Morbi augue velit, tempus mattis dignissim nec, porta sed risus. Donec eget magna eu lorem tristique pellentesque eget eu dui. Fusce lacinia tempor malesuada. Ut lacus sapien, placerat a ornare nec, elementum sit amet felis. Maecenas pretium lorem hendrerit eros sagittis fermentum.</p>
+                                <p><?php echo $movieData['moviesStoryLine'] ?> </p>
                             </div>
 
                             <!-- Media -->
@@ -146,12 +146,12 @@
                                 <h3 class="title">Details</h3>
 
                                 <ul>
-                                    <li><strong>Release date: </strong>December 15, 2017</li>
-                                    <li><strong>Director: </strong><a href="#">Rian Johnson</a></li>
-                                    <li><strong>Budget: </strong>200 million USD</li>
-                                    <li><strong>Country: </strong>USA</li>
-                                    <li><strong>Language: </strong>English</li>
-                                    <li><strong>Production Co: </strong><a href="#">Lucasfilm</a></li>
+                                    <li><strong>Release date: </strong><?php echo $movieData['release_Date'] ?></li>
+                                    <li><strong>Director: </strong><a href="#"><?php echo $movieData['Director'] ?></a></li>
+                                    <li><strong>Budget: </strong><?php echo $movieData['Budget'] ?> USD</li>
+                                    <li><strong>Country: </strong><?php echo $movieData['Country'] ?></li>
+                                    <li><strong>Language: </strong><?php echo $movieData['Language'] ?></li>
+                                    <li><strong>Production Co: </strong><a href="#"><?php echo $movieData['ProductionCo'] ?></a></li>
                                 </ul>
                             </aside>
                             <!-- End of Details Widget -->
