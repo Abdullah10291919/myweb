@@ -192,7 +192,7 @@
                             <!-- Start of Movie Details -->
                             <div class="movie-details">
                                 <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details"><?= $moviel['title']; ?></a>
+                                    <a href="<?php echo base_url() ?>details?id=<?php echo $moviel['id']; ?>"><?= $moviel['title']; ?></a>
                                 </h4>
                                 <span class="released"><?= $moviel['release_Date']; ?></span>
                             </div>

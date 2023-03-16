@@ -1,0 +1,11 @@
+CRITICAL - 2023-03-15 18:26:26 --> Undefined variable $title
+in APPPATH\Views\movie-grid.php on line 9.
+ 1 APPPATH\Views\movie-grid.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'APPPATH\\Views\\movie-grid.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\movie-grid.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('movie-grid', [], true)
+ 5 APPPATH\Controllers\Movies.php(19): view('movie-grid')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movies->latest()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

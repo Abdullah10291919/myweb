@@ -75,59 +75,14 @@
                                 <h3 class="title"> Photos & Videos</h3>
 
                                 <ul class="image-gallery isotope">
-                                    <li class="element">
-                                        <a href="assets/images/blog/bloglist-1.jpg">
-                                            <img src="assets/images/blog/bloglist-1.jpg" class="img-responsive" alt="">
+
+                                    <li ng-repeat = "image in movieImage | limitTo:15" class="element">
+                                        <a href="{{image}}">
+                                            <img src="{{image}}" class="img-responsive" alt="">
                                         </a>
                                     </li>
 
-                                    <li class="element">
-                                        <a href="assets/images/blog/bloglist-2.jpg">
-                                            <img src="assets/images/blog/bloglist-2.jpg" class="img-responsive" alt="">
-                                        </a>
-                                    </li>
-
-                                    <li class="element">
-                                        <a href="assets/images/other/home2-bg.jpg">
-                                            <img src="assets/images/other/home2-bg.jpg" class="img-responsive" alt="">
-                                        </a>
-                                    </li>
-
-                                    <li class="element">
-                                        <a href="assets/images/blog/bloglist-2.jpg">
-                                            <img src="assets/images/blog/bloglist-2.jpg" class="img-responsive" alt="">
-                                        </a>
-                                    </li>
-
-                                    <li class="element">
-                                        <a href="assets/images/blog/bloglist-1.jpg">
-                                            <img src="assets/images/blog/bloglist-1.jpg" class="img-responsive" alt="">
-                                        </a>
-                                    </li>
-
-                                    <li class="element">
-                                        <a href="assets/images/blog/bloglist-3.jpg">
-                                            <img src="assets/images/blog/bloglist-3.jpg" class="img-responsive" alt="">
-                                        </a>
-                                    </li>
-
-                                    <li class="element">
-                                        <a href="assets/images/blog/bloglist-1.jpg">
-                                            <img src="assets/images/blog/bloglist-1.jpg" class="img-responsive" alt="">
-                                        </a>
-                                    </li>
-
-                                    <li class="element">
-                                        <a href="assets/images/other/landscape.jpg">
-                                            <img src="assets/images/other/landscape.jpg" class="img-responsive" alt="">
-                                        </a>
-                                    </li>
-
-                                    <li class="element">
-                                        <a href="assets/images/other/home2-bg.jpg">
-                                            <img src="assets/images/other/home2-bg.jpg" class="img-responsive" alt="">
-                                        </a>
-                                    </li>
+                                     
                                 </ul>
 
                             </div>
@@ -161,44 +116,20 @@
                                 <h3 class="title">Cast</h3>
 
                                 <ul class="cast-wrapper">
-                                    <li>
+                                    <li ng-repeat= "cast in movieActors">
                                         <a href="celebrity-detail.html">
                                             <span class="circle-img">
-                                                <img src="assets/images/celebrities/celebrity1.jpg" alt="">
+                                                <img style="width: 86px!important;
+    height: 86px!important;" src="{{cast.profileImage}}" alt="">
                                             </span>
-                                            <h6 class="name">Bryan Doe</h6>
+                                            <h6 class="name">{{cast.name}}</h6>
                                         </a>
                                     </li>
 
-                                    <li>
-                                        <a href="celebrity-detail.html">
-                                            <span class="circle-img">
-                                                <img src="assets/images/celebrities/celebrity2.jpg" alt="">
-                                            </span>
-                                            <h6 class="name">Baron Saul</h6>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="celebrity-detail.html">
-                                            <span class="circle-img">
-                                                <img src="assets/images/celebrities/celebrity3.jpg" alt="">
-                                            </span>
-                                            <h6 class="name">Ewan Actor</h6>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="celebrity-detail.html">
-                                            <span class="circle-img">
-                                                <img src="assets/images/celebrities/celebrity4.jpg" alt="">
-                                            </span>
-                                            <h6 class="name">Nicole Beet</h6>
-                                        </a>
-                                    </li>
+                                    
                                 </ul>
 
-                                <a href="celebrities-list.html" class="btn btn-main btn-effect mt20">view all</a>
+                                <!-- <a href="celebrities-list.html" class="btn btn-main btn-effect mt20">view all</a> -->
 
                             </aside>
                             <!-- End of Details Widget -->
@@ -228,22 +159,22 @@
 
 
                 <!-- Start of Latest Movies Slider -->
-                <div class="owl-carousel recommended-slider mt20">
-
+                <div class="col-sm-12 row">
+            
                     <!-- === Start of Sliding Item 1 === -->
-                    <div class="item">
+                    <div ng-repeat = "movie in moviebygenre" class="col-3">
                         <!-- Start of Movie Box -->
                         <div class="movie-box-1">
 
                             <!-- Start of Poster -->
                             <div class="poster">
-                                <img src="assets/images/posters/poster-5.jpg" alt="">
+                                <img src="{{movie.image}}" alt="">
                             </div>
                             <!-- End of Poster -->
 
                             <!-- Start of Buttons -->
                             <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
+                                <a href="{{movie.videoLink}}" class="play-video">
                                     <i class="fa fa-play"></i>
                                 </a>
                             </div>
@@ -252,9 +183,9 @@
                             <!-- Start of Movie Details -->
                             <div class="movie-details">
                                 <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">Daredevil</a>
+                                    <a href="<?php echo base_url() ?>details">{{movie.title}}</a>
                                 </h4>
-                                <span class="released">19 Apr 2015</span>
+                                <span class="released">{{movie.releaseDate}}</span>
                             </div>
                             <!-- End of Movie Details -->
 
@@ -267,7 +198,7 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star-half-o"></i>
                                 </div>
-                                <span>8.7 / 10</span>
+                                <span>{{movie.rating}} / 10</span>
                             </div>
                             <!-- End of Rating -->
 
@@ -276,241 +207,8 @@
                     </div>
                     <!-- === End of Sliding Item 1 === -->
 
-
-                    <!-- === Start of Sliding Item 2 === -->
-                    <div class="item">
-                        <!-- Start of Movie Box -->
-                        <div class="movie-box-1">
-
-                            <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="assets/images/posters/poster-6.jpg" alt="">
-                            </div>
-                            <!-- End of Poster -->
-
-                            <!-- Start of Buttons -->
-                            <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                            <!-- End of Buttons -->
-
-                            <!-- Start of Movie Details -->
-                            <div class="movie-details">
-                                <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">Stranger Things</a>
-                                </h4>
-                                <span class="released">15 Jul 2016</span>
-                            </div>
-                            <!-- End of Movie Details -->
-
-                            <!-- Start of Rating -->
-                            <div class="stars">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-o"></i>
-                                </div>
-                                <span>9 / 10</span>
-                            </div>
-                            <!-- End of Rating -->
-
-                        </div>
-                        <!-- End of Movie Box -->
-                    </div>
-                    <!-- === End of Sliding Item 2 === -->
-
-
-                    <!-- === Start of Sliding Item 3 === -->
-                    <div class="item">
-                        <!-- Start of Movie Box -->
-                        <div class="movie-box-1">
-
-                            <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="assets/images/posters/poster-7.jpg" alt="">
-                            </div>
-                            <!-- End of Poster -->
-
-                            <!-- Start of Buttons -->
-                            <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                            <!-- End of Buttons -->
-
-                            <!-- Start of Movie Details -->
-                            <div class="movie-details">
-                                <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">Luke Cage</a>
-                                </h4>
-                                <span class="released">30 Sep 2016</span>
-                            </div>
-                            <!-- End of Movie Details -->
-
-                            <!-- Start of Rating -->
-                            <div class="stars">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                                <span>7.6 / 10</span>
-                            </div>
-                            <!-- End of Rating -->
-
-                        </div>
-                        <!-- End of Movie Box -->
-                    </div>
-                    <!-- === End of Sliding Item 3 === -->
-
-
-                    <!-- === Start of Sliding Item 4 === -->
-                    <div class="item">
-                        <!-- Start of Movie Box -->
-                        <div class="movie-box-1">
-
-                            <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="assets/images/posters/poster-8.jpg" alt="">
-                            </div>
-                            <!-- End of Poster -->
-
-                            <!-- Start of Buttons -->
-                            <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                            <!-- End of Buttons -->
-
-                            <!-- Start of Movie Details -->
-                            <div class="movie-details">
-                                <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">The Flash</a>
-                                </h4>
-                                <span class="released">7 Oct 2014</span>
-                            </div>
-                            <!-- End of Movie Details -->
-
-                            <!-- Start of Rating -->
-                            <div class="stars">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                                <span>8 / 10</span>
-                            </div>
-                            <!-- End of Rating -->
-
-                        </div>
-                        <!-- End of Movie Box -->
-                    </div>
-                    <!-- === End of Sliding Item 4 === -->
-
-
-                    <!-- === Start of Sliding Item 5 === -->
-                    <div class="item">
-                        <!-- Start of Movie Box -->
-                        <div class="movie-box-1">
-
-                            <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="assets/images/posters/poster-5.jpg" alt="">
-                            </div>
-                            <!-- End of Poster -->
-
-                            <!-- Start of Buttons -->
-                            <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                            <!-- End of Buttons -->
-
-                            <!-- Start of Movie Details -->
-                            <div class="movie-details">
-                                <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">Daredevil</a>
-                                </h4>
-                                <span class="released">19 Apr 2015</span>
-                            </div>
-                            <!-- End of Movie Details -->
-
-                            <!-- Start of Rating -->
-                            <div class="stars">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-o"></i>
-                                </div>
-                                <span>8.7 / 10</span>
-                            </div>
-                            <!-- End of Rating -->
-
-                        </div>
-                        <!-- End of Movie Box -->
-                    </div>
-                    <!-- === End of Sliding Item 5 === -->
-
-
-                    <!-- === Start of Sliding Item 6 === -->
-                    <div class="item">
-                        <!-- Start of Movie Box -->
-                        <div class="movie-box-1">
-
-                            <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="assets/images/posters/poster-6.jpg" alt="">
-                            </div>
-                            <!-- End of Poster -->
-
-                            <!-- Start of Buttons -->
-                            <div class="buttons">
-                                <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
-                                    <i class="fa fa-play"></i>
-                                </a>
-                            </div>
-                            <!-- End of Buttons -->
-
-                            <!-- Start of Movie Details -->
-                            <div class="movie-details">
-                                <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details">Stranger Things</a>
-                                </h4>
-                                <span class="released">15 Jul 2016</span>
-                            </div>
-                            <!-- End of Movie Details -->
-
-                            <!-- Start of Rating -->
-                            <div class="stars">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half-o"></i>
-                                </div>
-                                <span>9 / 10</span>
-                            </div>
-                            <!-- End of Rating -->
-
-                        </div>
-                        <!-- End of Movie Box -->
-                    </div>
-                    <!-- === End of Sliding Item 6 === -->
-
+ 
+ 
                 </div>
                 <!-- End of Latest Movies Slider -->
 
@@ -856,3 +554,204 @@
 </body>
 
 </html>
+<script>
+    var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) { 
+          
+            $scope.moviebygenre = [];
+            const apiKey = '59a398eb937d1f39846feac1a91e7940';
+
+            $scope.UpcommingMovies = function() {
+            // set the endpoint URL and query parameters
+            const endpointUrl = "https://api.themoviedb.org/3/movie/upcoming";
+            const queryParams = {
+            api_key: apiKey,
+            language: "en-US",
+            page: 1
+            };
+
+            // make the AJAX request
+            $.ajax({
+                url: 'https://api.themoviedb.org/3/search/movie',
+                type: 'GET',
+                data: {
+                    api_key: apiKey,
+                    query: '<?php 
+                    $words = explode("," , $movieData['Genre']);
+                    $first_word = trim($words[0]); // trim() function removes any leading/trailing whitespace
+                    
+                    echo $first_word;
+                    
+                    
+                     ?>', // The keyword to search for in the movie titles
+                    language: "en-US",
+                     page: 1
+                },
+            dataType: "json",
+            success: function(response) {
+    // Handle the response here
+    console.log(response);
+
+    // Retrieve up to 4 movies from the response
+    const movies = response.results.slice(0, 4).map(async (movie) => {
+      // Retrieve the video link for the movie
+      const videoResponse = await $.ajax({
+        url: `https://api.themoviedb.org/3/movie/${movie.id}/videos`,
+        type: 'GET',
+        data: {
+          api_key: apiKey,
+        },
+      });
+
+      const videoKey = videoResponse.results[0]?.key || null;
+      const videoLink = videoKey ? `https://www.youtube.com/watch?v=${videoKey}` : null;
+
+      // Retrieve the movie rating
+      const ratingResponse = await $.ajax({
+        url: `https://api.themoviedb.org/3/movie/${movie.id}`,
+        type: 'GET',
+        data: {
+          api_key: apiKey,
+        },
+      });
+
+                const rating = ratingResponse.vote_average || null;
+
+                // Construct the movie object with the video link and rating
+                return {
+                    title: movie.title,
+                    image: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
+                    description: movie.overview,
+                    releaseDate: movie.release_date,
+                    readMoreUrl: `https://www.themoviedb.org/movie/${movie.id}`,
+                    videoLink,
+                    rating,
+                };
+                });
+
+                Promise.all(movies).then((moviesArray) => {
+                console.log(moviesArray);
+                $scope.moviebygenre = moviesArray;
+                $scope.$digest();
+                });
+            },
+            error: function(error) {
+                // Handle any errors here
+                console.log(error);
+            },
+        });
+               
+        }
+        $scope.UpcommingMovies();
+            $scope.movieActors = [];
+            $scope.movieCast = function(){
+                $.ajax({
+  url: 'https://api.themoviedb.org/3/search/movie',
+  type: 'GET',
+  data: {
+    api_key: apiKey,
+    query: '<?php echo $movieData['title']; ?>',
+    page: '1'
+  },
+  success: function(response) {
+    // Handle the response here
+    console.log(response);
+
+    // Retrieve the movie id from the response
+    const movieId = response.results[0].id;
+
+    // Use the movie id to retrieve the cast information
+    $.ajax({
+      url: `https://api.themoviedb.org/3/movie/${movieId}/credits`,
+      type: 'GET',
+      data: {
+        api_key: apiKey,
+      },
+      success: function(creditsResponse) {
+        // Handle the credits response here
+        console.log("creditsResponse" , creditsResponse);
+
+        // Extract the cast information from the credits response
+        const cast = creditsResponse.cast.slice(0, 6).map((actor) => {
+          return {
+            name: actor.name,
+            character: actor.character,
+            profileImage: `https://image.tmdb.org/t/p/w500${actor.profile_path}`,
+          };
+        });
+
+        console.log(cast);
+        $scope.movieActors = cast;
+        $scope.$digest();
+      },
+      error: function(error) {
+        // Handle any errors here
+        console.log(error);
+      },
+    });
+  },
+  error: function(error) {
+    // Handle any errors here
+    console.log(error);
+  },
+});
+
+
+
+            }
+            $scope.movieCast();
+            $scope.movieImage = [];
+            $scope.MovieImages = function(){
+                $.ajax({
+  url: 'https://api.themoviedb.org/3/search/movie',
+  type: 'GET',
+  data: {
+    api_key: apiKey,
+    query: '<?php echo $movieData['title']; ?>',
+    page: '1'
+  },
+  success: function(response) {
+    // Handle the response here
+    console.log(response);
+
+    // Retrieve the ID of the first movie in the response
+    const movieId = response.results[0].id;
+
+    // Make a request to retrieve the images for the movie
+    $.ajax({
+      url: `https://api.themoviedb.org/3/movie/${movieId}/images`,
+      type: 'GET',
+      data: {
+        api_key: apiKey,
+      },
+      success: function(imagesResponse) {
+        // Handle the images response here
+        console.log(imagesResponse);
+
+        // Construct an array of image URLs
+        const imageUrls = imagesResponse.backdrops.map((image) => {
+          return `https://image.tmdb.org/t/p/w500${image.file_path}`;
+        });
+
+        // Log the image URLs
+        console.log(imageUrls);
+        $scope.movieImage = imageUrls;
+        $scope.$digest();
+      },
+      error: function(error) {
+        // Handle any errors here
+        console.log(error);
+      },
+    });
+  },
+  error: function(error) {
+    // Handle any errors here
+    console.log(error);
+  },
+});
+
+            }
+            $scope.MovieImages();
+       
+});
+    </script>
