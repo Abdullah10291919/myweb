@@ -7,13 +7,17 @@ use App\Models\AdminModel;
 class Admin extends BaseController {
 
 
-    // function __construct()
-    // {
-	// 	parent::__construct();
+    function __construct()
+    {
+		parent::__construct();
 		  
-    // //     $this->load->model('adminmodel');
-	// //   $this->load->library('session'); 
-	// }
+    //     $this->load->model('adminmodel');
+	//   $this->load->library('session'); 
+    
+    
+        helper(['form', 'url' , 'upload']);
+    
+	}
 
     public function login(){
 
@@ -127,44 +131,110 @@ class Admin extends BaseController {
     
       return $text;
     }
-    function addmovies(){
-        $adminModel = new AdminModel();
-            if(isset($_POST['title'])){
+
+    public function addmovies()
+{
+    $adminModel = new AdminModel();
+    $data = array();
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+      
+        $_POST['slug'] = $this->slugify($_POST['title']);
+      
+        // Handle image upload
+        if (isset($_FILES['image'])) {
+            $config['upload_path'] = './uploads/';
+            $config['allowed_types'] = 'gif|jpg|png';
+            $config['max_size'] = 2048; // 2 MB
+            $config['encrypt_name'] = TRUE;
+            
+           
+            if ($Fthis->upload->do_upload('image')) {
+                $data['image'] = 'uploads/' . $this->upload->data('file_name');
+            } else {
+                $error = $this->upload->display_errors();
+                $data = array(
+                    "success" => false,
+                    "message" => $error
+                );
+                echo json_encode($data);
+                exit;
+            }
+        }
+
+        try {
+            $res = $adminModel->insert($_POST);
+        } catch (Exception $ex) {
+            $data = array(
+                "success" => false,
+                "message" => $ex->getMessage()
+            );
+            echo json_encode($data);
+            exit;
+        }
+
+        if ($res) {
+            $data = array(
+                "success" => true,
+                "message" => 'Record Added Successfully'
+            );
+            echo json_encode($data);
+        } else {
+            $data = array(
+                "success" => false,
+                "message" => 'Try Again!'
+            );
+            echo json_encode($data);
+        }
+        exit;
+    }
+
+    echo view('admin/template/header');
+    echo view('admin/template/sidebar');
+    echo view('admin/addMovies');
+    echo view('admin/template/footer');
+}
+
+    // function addmovies(){
+    //     $adminModel = new AdminModel();
+    //         if(isset($_POST['title'])){
 
                 
               
-               $_POST['slug'] = $this->slugify($_POST['title']);
+    //             print_r($_POST['image']);
+    //             return;
+    //            $_POST['slug'] = $this->slugify($_POST['title']);
               
-               try{
-                $res =  $adminModel->insert($_POST);
-              }catch(Exception $ex){
-                print_r($ex) ;
-              }
+    //            try{
+    //             $res =  $adminModel->insert($_POST);
+    //           }catch(Exception $ex){
+    //             print_r($ex) ;
+    //           }
               
-               if( $res ){
-                $data = array(
-                    "success" => true,
-                    "message" => 'Record Added Successfully'
-                );
-                echo json_encode($data);
-               }else{
-                $data = array(
-                    "success" => false,
-                    "message" => 'Try Again!'
-                );
-                echo json_encode($data);
-               }
-                exit;
-            }
+    //            if( $res ){
+    //             $data = array(
+    //                 "success" => true,
+    //                 "message" => 'Record Added Successfully'
+    //             );
+    //             echo json_encode($data);
+    //            }else{
+    //             $data = array(
+    //                 "success" => false,
+    //                 "message" => 'Try Again!'
+    //             );
+    //             echo json_encode($data);
+    //            }
+    //             exit;
+    //         }
 
-             echo view('admin/template/header');
-             echo view('admin/template/sidebar');
-             echo view('admin/addMovies');
-             echo view('admin/template/footer');
+    //          echo view('admin/template/header');
+    //          echo view('admin/template/sidebar');
+    //          echo view('admin/addMovies');
+    //          echo view('admin/template/footer');
       
 
 
-    }
+    // }
 
 //     function catogery(){
 //         if(!isset($_SESSION['adminlogin'])){

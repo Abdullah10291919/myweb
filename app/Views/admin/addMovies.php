@@ -34,7 +34,7 @@
                     <h5>Add Movies</h5>
                   </div>
                   <!-- <?php echo base_url() ?>addMoviesdata -->
-                  <form class="form theme-form" id="moviesadd" onSubmit="return checkmethod()" name="moviesadd" method="POST"   action="#">
+                  <form class="form theme-form" id="moviesadd" enctype="multipart/form-data" onSubmit="return checkmethod()" name="moviesadd" method="POST"   action="#">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-4">
@@ -124,7 +124,13 @@
                             <input class="form-control" required id="rating" name="rating" min="1"  max="5" type="number" placeholder="Please Enter the Rating">
                           </div>
                         </div>
-                        
+                        <div class="col-10">
+                          <div class="mb-3">
+                            <label class="form-label" for="rating">Movie Image</label>
+                            <input class="form-control" required id="image" name="image"  
+                             type="file"  >
+                          </div>
+                        </div>
                         <div class="col-6">
                           <div class="mb-3">
                             
@@ -158,15 +164,12 @@
                       $.ajax({
                             type: "POST",
                             url: "<?php echo base_url() ?>addMoviesdata",
-                            data: $('#moviesadd').serialize() ,
-                            dataType:'json',
-                            success: function(response) {
-                            // show success message and hide form
-                            console.log(response);
-                            
-                            //    response = JSON.parse(response);
-                           
-                               if(response.success){
+                            data: new FormData($('#moviesadd')[0]),
+                              contentType: false,
+                              processData: false,
+                              dataType: 'json',
+                              success: function(response) {
+                            if(response.success){
                                 Swal.fire(
                                     'Success',
                                     response.message,
