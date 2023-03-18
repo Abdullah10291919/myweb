@@ -33,8 +33,9 @@
                   <div class="card-header pb-0">
                     <h5>Add Movies</h5>
                   </div>
-                  <!-- <?php echo base_url() ?>addMoviesdata -->
-                  <form class="form theme-form" id="moviesadd" enctype="multipart/form-data" onSubmit="return checkmethod()" name="moviesadd" method="POST"   action="#">
+                  <!-- action="<?php echo base_url() ?>addMoviesdata" -->
+                  <!-- onsubmit="return checkmethod()" -->
+                  <form class="form theme-form" id="moviesadd"  enctype="multipart/form-data"   name="moviesadd" method="POST"   >
                     <div class="card-body">
                       <div class="row">
                         <div class="col-4">
@@ -153,23 +154,20 @@
          <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
         <script>
-             
- 
-                function checkmethod(){
-                  
+             $(document).on('submit', '#moviesadd', function(e) {
+          e.preventDefault();
 
+          var formData = new FormData(this);
 
-                   
-                    
-                      $.ajax({
-                            type: "POST",
-                            url: "<?php echo base_url() ?>addMoviesdata",
-                            data: new FormData($('#moviesadd')[0]),
-                              contentType: false,
-                              processData: false,
-                              dataType: 'json',
-                              success: function(response) {
-                            if(response.success){
+          $.ajax({
+            url:  "<?php echo base_url() ?>addMoviesdata",
+            method: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+              response = JSON.parse(response);
+              if(response.success){
                                 Swal.fire(
                                     'Success',
                                     response.message,
@@ -183,15 +181,51 @@
                                     response.message,
                                     'error'
                                 )
+            },
+            error: function(xhr, status, error) {
+            
+            }});
+  });
+ 
+                function checkmethod(){
 
-                            return false;
-                            },
-                            error: function() {
-                            // handle errors
-                            alert("Error submitting form!");
-                            }
-                        });
-                    return false;
+
+                  alert("hello worl");
+                  return false;
+                    //    try{
+                    //     $.ajax({
+                    //         type: "POST",
+                    //         url: "<?php echo base_url() ?>addMoviesdata",
+                    //         data: new FormData($('#moviesadd')[0]),
+                    //         dataType: 'json',
+                    //         success: function(response) {
+                            // if(response.success){
+                            //     Swal.fire(
+                            //         'Success',
+                            //         response.message,
+                            //         'success'
+                            //       )
+                            //       $('.form-control').val('');
+                            //       return false;
+                            //    }
+                            //    Swal.fire(
+                            //         'error',
+                            //         response.message,
+                            //         'error'
+                            //     )
+
+                    //         return false;
+                    //         },
+                    //         error: function() {
+                    //         // handle errors
+                    //         alert("Error submitting form!");
+                    //         }
+                    //     });
+                    //   }catch(ex){
+                    //     console.log(ex);
+                    //     return false;
+                    //   }
+                    // return false;
                 }
 
          </script>

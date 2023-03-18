@@ -7,17 +7,12 @@ use App\Models\AdminModel;
 class Admin extends BaseController {
 
 
-    function __construct()
-    {
-		parent::__construct();
-		  
-    //     $this->load->model('adminmodel');
-	//   $this->load->library('session'); 
+    // function __construct()
+    // {
+	 
+	//    
     
-    
-        helper(['form', 'url' , 'upload']);
-    
-	}
+	// }
 
     public function login(){
 
@@ -136,49 +131,45 @@ class Admin extends BaseController {
 {
     $adminModel = new AdminModel();
     $data = array();
-
+    helper(['form', 'url' , 'upload']);
+   
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       
-        $_POST['slug'] = $this->slugify($_POST['title']);
+        // $_POST['slug'] = $this->slugify($_POST['title']);
       
         // Handle image upload
-        if (isset($_FILES['image'])) {
-            $config['upload_path'] = './uploads/';
-            $config['allowed_types'] = 'gif|jpg|png';
-            $config['max_size'] = 2048; // 2 MB
-            $config['encrypt_name'] = TRUE;
+        if (isset($_POST)) {
+             
+            $file = $this->request->getFile('image');
+             
+
             
-           
-            if ($Fthis->upload->do_upload('image')) {
-                $data['image'] = 'uploads/' . $this->upload->data('file_name');
-            } else {
-                $error = $this->upload->display_errors();
-                $data = array(
-                    "success" => false,
-                    "message" => $error
-                );
-                echo json_encode($data);
-                exit;
-            }
-        }
+            if ($file->isValid() && ! $file->hasMoved()) {
+                $newName = $file->getRandomName();
 
-        try {
-            $res = $adminModel->insert($_POST);
-        } catch (Exception $ex) {
-            $data = array(
-                "success" => false,
-                "message" => $ex->getMessage()
-            );
-            echo json_encode($data);
-            exit;
-        }
+                // print_r(WRITEPATH . 'uploads');
+                // exit;
+                $file->move('./public/uploads', $newName);
+                          $_POST['image_url'] = $newName;
+                           
+                    $res = $adminModel->insert($_POST);
 
-        if ($res) {
-            $data = array(
-                "success" => true,
-                "message" => 'Record Added Successfully'
-            );
-            echo json_encode($data);
+                    if ($res) {
+                        $data = array(
+                            "success" => true,
+                            "message" => 'Record Added Successfully'
+                        );
+                        echo json_encode($data);
+              
+                        }else{
+                            $data = array(
+                                "success" => false,
+                                "message" => 'Try Again!'
+                            );
+                            echo json_encode($data);   
+                        }
+        
+                    }
         } else {
             $data = array(
                 "success" => false,
@@ -188,11 +179,13 @@ class Admin extends BaseController {
         }
         exit;
     }
-
     echo view('admin/template/header');
     echo view('admin/template/sidebar');
     echo view('admin/addMovies');
     echo view('admin/template/footer');
+  
+
+   
 }
 
     // function addmovies(){

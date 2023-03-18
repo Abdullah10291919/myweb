@@ -1,6 +1,6 @@
 
         <!-- =============== START OF MOVIE DETAIL INTRO =============== -->
-        <section class="movie-detail-intro overlay-gradient ptb100" style="background: url(assets/images/other/movie-detail-bg.jpg);">
+        <section class="movie-detail-intro   ptb100" style="background: url({{bannerImage}});">
         </section>
         <!-- =============== END OF MOVIE DETAIL INTRO =============== -->
 
@@ -11,11 +11,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
+                    
                         <div class="movie-poster">
-                            <img src="assets/images/posters/poster-1.jpg" alt="">
+                            <?php if(!empty($movieData['image_url'])){ ?>
+                                            
+                                <img src="<?php echo base_url().'public/uploads/'.$movieData['image_url'];?>" alt="">
 
-                            <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY" class="play-video">
+                           <?php  }else{ ?>
+                            <img src="assets/images/posters/poster-1.jpg" alt="">
+                          <?php  } ?>
+                           
+
+                            <a href="<?php echo $movieData['video_url']; ?>" class="play-video">
                                 <i class="fa fa-play"></i>
                             </a>
                         </div>
@@ -31,8 +38,8 @@
                                 <li><?= $movieData['release_Date'] ?> <?= $movieData['Country'] ?></li>
                             </ul>
 
-                            <a href="#" class="btn btn-main btn-effect">trailer</a>
-                            <a href="#" class="btn btn-main btn-effect">watch later</a>
+                            <a  href="<?php echo $movieData['video_url']; ?>"  target="_blank" class="btn   btn-main btn-effect">trailer</a>
+                           
                             <a href="#" class="btn rate-movie"><i class="icon-heart"></i></a>
 
                             <div class="rating mt10">
@@ -737,6 +744,25 @@
         console.log(imageUrls);
         $scope.movieImage = imageUrls;
         $scope.$digest();
+
+        
+            $.ajax({
+            url: "https://api.themoviedb.org/3/movie/" + movieId,
+            method: "GET",
+            data: {
+                api_key: apiKey
+            },
+            success: function(response) {
+                // get the backdrop path and build the full image URL
+                var backdropPath = response.backdrop_path;
+                var imageUrl = "https://image.tmdb.org/t/p/original" + backdropPath;
+
+                // use the image URL as needed
+                console.log(imageUrl);
+                $scope.bannerImage = imageUrl;
+                 $scope.$digest();
+            }
+            });
       },
       error: function(error) {
         // Handle any errors here
@@ -751,6 +777,7 @@
 });
 
             }
+            $scope.bannerImage = '';
             $scope.MovieImages();
        
 });
