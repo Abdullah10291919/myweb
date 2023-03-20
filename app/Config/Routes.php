@@ -37,7 +37,7 @@ $routes->get('/contact-us' , 'Home::contactus');
  
  
 $routes->get('/login-register' , 'Home::loginregister');
-
+$routes->get('/searchmovie' , 'Home::searchmovies');
 $routes->get('/testimonials' , 'Home::testimonials');
 $routes->get('/upcomming' , 'Movies::upcomming');
 $routes->get('/latest' , 'Movies::latest');
@@ -55,6 +55,9 @@ $routes->post('/signup' , 'Admin::signup');
 
 $routes->get('/add_movies' , 'Admin::addmovies');
 $routes->post('/addMoviesdata' , 'Admin::addmovies');
+
+
+ 
 // $routes->get('/registration' , 'Admin::registration');
 // $routes->get('/addcatogery' , 'Admin::addcatogery');
 // $routes->get('/catogery' , 'Admin::catogery');

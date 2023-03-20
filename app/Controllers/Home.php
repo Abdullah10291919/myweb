@@ -27,6 +27,15 @@ class Home extends BaseController
         
     }
 
+    public  function searchmovies(){
+        $data = array();
+        $data['title'] = 'Search Movies';
+       
+        echo view('header/header',$data  );
+        echo view('watch-later');
+        
+        
+    }
     
 	public function latestmovies(){
 		 

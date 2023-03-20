@@ -180,9 +180,9 @@
                                     
 
                                     <!-- Menu Item -->
-                                    <li>
+                                    <!-- <li>
                                         <a class="dropdown-item" href="watch-later.html">Watch Later</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </li>
 
@@ -201,19 +201,19 @@
                         <ul class="navbar-nav extra-nav">
 
                             <!-- Menu Item -->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link toggle-search" href="#">
                                     <i class="fa fa-search"></i>
                                 </a>
-                            </li>
+                            </li> -->
 
                             <!-- Menu Item -->
-                            <li class="nav-item notification-wrapper">
+                            <!-- <li class="nav-item notification-wrapper">
                                 <a class="nav-link notification" href="#">
                                     <i class="fa fa-globe"></i>
                                     <span class="notification-count">2</span>
                                 </a>
-                            </li>
+                            </li> -->
 
                             <!-- Menu Item -->
                             <li class="nav-item m-auto">

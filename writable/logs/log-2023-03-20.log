@@ -1,0 +1,83 @@
+CRITICAL - 2023-03-20 12:11:58 --> Invalid file: "admin/watch-later.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/watch-later.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/watch-later', [], true)
+ 3 APPPATH\Controllers\Admin.php(134): view('admin/watch-later')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->searchmovies()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 12:12:57 --> Invalid file: "admin/watch-later.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/watch-later.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/watch-later', [], true)
+ 3 APPPATH\Controllers\Home.php(32): view('admin/watch-later')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->searchmovies()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 12:12:59 --> Invalid file: "admin/watch-later.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/watch-later.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/watch-later', [], true)
+ 3 APPPATH\Controllers\Home.php(32): view('admin/watch-later')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->searchmovies()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 12:13:29 --> Invalid file: "admin/watch-later.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/watch-later.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/watch-later', [], true)
+ 3 APPPATH\Controllers\Home.php(32): view('admin/watch-later')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->searchmovies()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 12:14:02 --> Undefined variable $data
+in APPPATH\Controllers\Home.php on line 29.
+ 1 APPPATH\Controllers\Home.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Home.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->searchmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 12:39:39 --> Undefined variable $title
+in APPPATH\Views\movie-grid.php on line 9.
+ 1 APPPATH\Views\movie-grid.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'APPPATH\\Views\\movie-grid.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\movie-grid.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('movie-grid', [], true)
+ 5 APPPATH\Controllers\Movies.php(13): view('movie-grid')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movies->upcomming()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 12:42:12 --> Undefined variable $latestmovies
+in APPPATH\Views\movie-grid.php on line 64.
+ 1 APPPATH\Views\movie-grid.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $latestmovies', 'APPPATH\\Views\\movie-grid.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\movie-grid.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('movie-grid', [], true)
+ 5 APPPATH\Controllers\Movies.php(16): view('movie-grid')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movies->upcomming()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 12:45:50 --> Undefined array key "id"
+in APPPATH\Controllers\Movies.php on line 16.
+ 1 APPPATH\Controllers\Movies.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Movies.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movies->upcomming()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 12:47:15 --> Undefined variable $latestmovies
+in APPPATH\Views\movie-grid.php on line 64.
+ 1 APPPATH\Views\movie-grid.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $latestmovies', 'APPPATH\\Views\\movie-grid.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\movie-grid.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('movie-grid', [], true)
+ 5 APPPATH\Controllers\Movies.php(22): view('movie-grid', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movies->upcomming()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

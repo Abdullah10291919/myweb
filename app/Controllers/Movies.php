@@ -9,24 +9,61 @@ class Movies extends BaseController
 
     public function upcomming()
 	{
-	    echo view('header/header');
-        echo view('movie-grid');
+		$data = array();
+		
+		$data['title'] ='Up Comming';
+		$adminModel = new AdminModel();
+        $latestmovies =   $adminModel->where('catogery' ,1)->limit(30)->findall();
+	   
+ 
+		
+		$data['latestmovies'] = $latestmovies;
+	echo view('header/header' , $data);
+	echo view('movie-grid' , $data);
 	}
 
     public function latest()
 	{
-		echo view('header/header');
-		echo view('movie-grid');
+		$data = array();
+		
+		$data['title'] ='Latest';
+		$adminModel = new AdminModel();
+        $latestmovies =   $adminModel->where('catogery' , 2)->limit(30)->findall();
+	   
+ 
+		
+		$data['latestmovies'] = $latestmovies;
+	echo view('header/header' , $data);
+	echo view('movie-grid' , $data);
 	}
     public function tvshows()
 	{
-        echo view('header/header');
-		echo view('movie-grid');
+		$data = array();
+		
+		$data['title'] ='Tv Shows';
+		$adminModel = new AdminModel();
+        $latestmovies =   $adminModel->where('catogery' , 3)->limit(30)->findall();
+	   
+ 
+		
+		$data['latestmovies'] = $latestmovies;
+	echo view('header/header' , $data);
+	echo view('movie-grid' , $data);
 	}
     public function mostwatched()
 	{
-		echo view('header/header');
-        echo view('movie-grid');
+		$data = array();
+		
+		$data['title'] ='Most Watched';
+
+		$adminModel = new AdminModel();
+        $latestmovies =   $adminModel->where('catogery' , 4)->limit(30)->findall();
+		   
+	 
+		    
+			$data['latestmovies'] = $latestmovies;
+	    echo view('header/header' , $data);
+        echo view('movie-grid' , $data);
 	}
     
     public function details($movieID = ''){

@@ -98,13 +98,14 @@
                 <div class="container">
 
                     <!-- ===== START OF SEARCH FORM ===== -->
-                    <form id="search-form-1">
-                        <div class="row justify-content-center">
-                            <div class="col-md-8 col-sm-10 col-12">
-                                <div class="form-group">
-                                    <input name="search-keyword" type="text" id="search-keyword" value="" class="form-control" placeholder="Enter Movies or Series Title">
+                    <form  action="<?php echo base_url() ?>searchmovie" method="GET">
+                        <div  class="row justify-content-center">
+                            <div  class="col-md-8 col-sm-10 col-12">
+                                <div class="form-group" style="display:inline-flex; width:100%;">
+                                    <input name="search-keyword" type="text" id="search-input" value="" class="form-control" placeholder="Enter Movies or Series Title">
                                     <button type="submit" class="btn btn-main btn-effect"><i class="fa fa-search"></i></button>
                                 </div>
+                                <div id="autocomplete"></div>
                             </div>
                         </div>
                     </form>
@@ -177,7 +178,15 @@
 
                             <!-- Start of Poster -->
                             <div class="poster">
-                                <img src="<?php echo base_url(); ?>assets/images/posters/poster-2.jpg" alt="">
+                            <?php if(!empty($moviel['image_url'])){ ?>
+                                            
+                                            <img style="  " src="<?php echo base_url().'public/uploads/'.$moviel['image_url'];?>" alt="">
+        
+                                       <?php  }else{ ?>
+                                        <img src="<?php echo base_url(); ?>assets/images/movies/poster-2.jpg" alt="">
+                                      <?php  } ?>
+                            
+                                <!-- <img src="<?php echo base_url(); ?>assets/images/posters/poster-2.jpg" alt=""> -->
                             </div>
                             <!-- End of Poster -->
 
@@ -252,9 +261,15 @@
                         <div class="movie-box-1 upcoming-featured-item">
 
                             <!-- Start of Poster -->
-                            <div class="poster">
-                                <img src="<?php echo base_url(); ?>assets/images/movies/upcoming-featured-item.jpg" alt="">
-                            </div>
+                            <?php if(!empty($upcommingMovies[0]['image_url'])){ ?>
+                                            
+                                            <img style="     width: 100%!important;
+    height: 648px!important;" src="<?php echo base_url().'public/uploads/'.$upcommingMovies[0]['image_url'];?>" alt="">
+        
+                                       <?php  }else{ ?>
+                                        <img src="<?php echo base_url(); ?>assets/images/movies/upcoming-featured-item.jpg" alt="">
+                                      <?php  } ?>
+                            
                             <!-- End of Poster -->
 
                             <!-- Start of Buttons -->
@@ -268,7 +283,7 @@
                             <!-- Start of Movie Details -->
                             <div class="movie-details">
                                 <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details"><?php echo $upcommingMovies[0]['title'] ?></a>
+                                    <a href="<?php echo base_url() ?>details/?id=<?php echo $upcommingMovies[0]['id'] ?>"><?php echo $upcommingMovies[0]['title'] ?></a>
                                 </h4>
                                 <span class="released">Release Date: <?php echo $upcommingMovies[0]['release_Date'] ?></span>
                             </div>
@@ -288,8 +303,13 @@
 
                             <!-- Start of Poster -->
                             <div class="poster">
-                                <img src="<?php echo base_url(); ?>assets/images/movies/upcoming-item-1.jpg" alt="">
-                            </div>
+                            <?php if(!empty($upcommingMovies[1]['image_url'])){ ?>
+                                            
+                                            <img src="<?php echo base_url().'public/uploads/'.$upcommingMovies[1]['image_url'];?>" alt="">
+            
+                                       <?php  }else{ ?>
+                                        <img src="<?php echo base_url(); ?>assets/images/movies/upcoming-item-2.jpg" alt="">
+                                      <?php  } ?>                            </div>
                             <!-- End of Poster -->
 
                             <!-- Start of Buttons -->
@@ -303,7 +323,7 @@
                             <!-- Start of Movie Details -->
                             <div class="movie-details">
                                 <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details"><?php echo $upcommingMovies[1]['title'] ?></a>
+                                    <a href="<?php echo base_url() ?>details/?id=<?php echo $upcommingMovies[1]['id'] ?>"><?php echo $upcommingMovies[1]['title'] ?></a>
                                 </h4>
                             </div>
                             <!-- End of Movie Details -->
@@ -316,7 +336,13 @@
 
                             <!-- Start of Poster -->
                             <div class="poster">
-                                <img src="<?php echo base_url(); ?>assets/images/movies/upcoming-item-2.jpg" alt="">
+                            <?php if(!empty($upcommingMovies[2]['image_url'])){ ?>
+                                            
+                                            <img src="<?php echo base_url().'public/uploads/'.$upcommingMovies[2]['image_url'];?>" alt="">
+            
+                                       <?php  }else{ ?>
+                                        <img src="<?php echo base_url(); ?>assets/images/movies/upcoming-item-2.jpg" alt="">
+                                      <?php  } ?>
                             </div>
                             <!-- End of Poster -->
 
@@ -331,7 +357,7 @@
                             <!-- Start of Movie Details -->
                             <div class="movie-details">
                                 <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details"><?php echo $upcommingMovies[2]['title'] ?></a>
+                                    <a href="<?php echo base_url() ?>details/?id=<?php echo $upcommingMovies[2]['id'] ?>"><?php echo $upcommingMovies[2]['title'] ?></a>
                                 </h4>
                             </div>
                             <!-- End of Movie Details -->
@@ -385,7 +411,12 @@
 
                             <!-- Start of Poster -->
                             <div class="poster">
-                                <img src="<?php echo base_url(); ?>assets/images/posters/poster-5.jpg" alt="">
+                            <?php if(!empty($moviel['image_url'])){ ?>
+                                     <img  src="<?php echo base_url().'public/uploads/'.$tv['image_url'];?>" alt="">
+        
+                                       <?php  }else{ ?>
+                                        <img src="<?php echo base_url(); ?>assets/images/movies/poster-2.jpg" alt="">
+                                      <?php  } ?>
                             </div>
                             <!-- End of Poster -->
 
@@ -400,7 +431,7 @@
                             <!-- Start of Movie Details -->
                             <div class="movie-details">
                                 <h4 class="movie-title">
-                                    <a href="<?php echo base_url() ?>details"><?php echo $tv['title'] ?></a>
+                                    <a href="<?php echo base_url() ?>details/?id=<?php echo $tv['id'] ?>"><?php echo $tv['title'] ?></a>
                                 </h4>
                                 <span class="released"><?php echo $tv['release_Date'] ?></span>
                             </div>
@@ -1097,6 +1128,75 @@ app.controller('myCtrl', function($scope) {
 //     console.log("Error:", error);
 //   }
 // });
+$(document).ready(function() {
 
+    const apiKey = '59a398eb937d1f39846feac1a91e7940';
+      // Add event listener for the search input field
+      $('#search-input').on('input', function() {
+        // Clear the autocomplete suggestions
+        $('#autocomplete').empty();
+        
+        // Get the search query from the input field
+        var query = $(this).val();
+        
+        // Make an AJAX request to the TMDB API
+        $.ajax({
+          url: 'https://api.themoviedb.org/3/search/movie',
+          type: 'GET',
+          dataType: 'json',
+          data: {
+            api_key: apiKey,
+            query: query,
+            include_adult: false
+          },
+          success: function(response) {
+            // Display the autocomplete suggestions
+            $.each(response.results, function(index, result) {
+              $('#autocomplete').append('<div>' + result.title + '</div>');
+            });
+          }
+        });
+      });
+      
+      // Add event listener for clicking on an autocomplete suggestion
+      $(document).on('click', '#autocomplete div', function() {
+        // Set the input field value to the selected suggestion
+        $('#search-input').val($(this).text());
+        
+        // Clear the autocomplete suggestions
+        $('#autocomplete').empty();
+      });
+    });
 </script>
+<style>
+    .poster img {
+    height: 300px!important;
+}
+
+ 
+#autocomplete {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+  border:0px;
+}
+
+#autocomplete div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#autocomplete div:hover {
+  background-color: #f2f2f2;
+}
+
+ 
+    </style>
 </html>

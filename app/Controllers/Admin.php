@@ -127,6 +127,8 @@ class Admin extends BaseController {
       return $text;
     }
 
+
+   
     public function addmovies()
 {
     $adminModel = new AdminModel();

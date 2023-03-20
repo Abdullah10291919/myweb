@@ -62,7 +62,7 @@
 
                     <!-- Movie List Item -->
                     <?php foreach($latestmovies as $key => $movie) { ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12"  >
                         <div class="movie-box-2 mb30">
                             <div class="listing-container">
 
@@ -99,13 +99,14 @@
                                     </div>
 
                                     <!-- Image -->
-                                    <img src="assets/images/posters/poster-1.jpg" alt="">
+ 
+                                    <img src="<?php echo base_url().'public/uploads/'.$movie['image_url'];?>" alt="">
                                 </div>
 
                                 <!-- Movie List Content -->
                                 <div class="listing-content">
                                     <div class="inner">
-                                        <h2 class="title"><?php echo $movie['title'] ?></h2>
+                                        <h6 class="title"><?php echo $movie['title'] ?></h6>
  
                                         <p><?php echo substr($movie['moviesStoryLine'], 0, 100);  ?></p>
 
