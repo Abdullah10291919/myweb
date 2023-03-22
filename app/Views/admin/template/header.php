@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,12 +27,10 @@
     <!-- Plugins css start-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>adminassets/assets/css/vendors/animate.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>adminassets/assets/css/vendors/chartist.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>adminassets/assets/css/vendors/owlcarousel.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>adminassets/assets/css/vendors/prism.css">
-    <link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script src="<?php echo base_url(); ?>adminassets/assets/js/jquery-3.5.1.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>adminassets/assets/css/vendors/slick.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>adminassets/assets/css/vendors/slick-theme.css">
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>adminassets/assets/css/vendors/bootstrap.css">
@@ -238,4 +237,4 @@
           <div class="d-lg-none col mobile-toggle pull-right"><i data-feather="more-horizontal"></i></div>
         </div>
       </div>
-      <!-- Page Header Ends    -->
+      <!-- Page Header Ends                              -->

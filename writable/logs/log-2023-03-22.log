@@ -1,0 +1,98 @@
+CRITICAL - 2023-03-22 11:16:33 --> Invalid file: "admin/movielist.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/movielist.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/movielist', [], true)
+ 3 APPPATH\Controllers\Admin.php(137): view('admin/movielist')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->movieslist()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 11:16:40 --> Invalid file: "admin/movielist.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/movielist.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/movielist', [], true)
+ 3 APPPATH\Controllers\Admin.php(137): view('admin/movielist')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->movieslist()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 11:20:44 --> Undefined variable $genrelist
+in APPPATH\Views\admin\movieslist.php on line 44.
+ 1 APPPATH\Views\admin\movieslist.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $genrelist', 'APPPATH\\Views\\admin\\movieslist.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\movieslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/movieslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(137): view('admin/movieslist')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->movieslist()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 11:20:56 --> Undefined variable $genrelist
+in APPPATH\Views\admin\movieslist.php on line 44.
+ 1 APPPATH\Views\admin\movieslist.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $genrelist', 'APPPATH\\Views\\admin\\movieslist.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\movieslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/movieslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(137): view('admin/movieslist')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->movieslist()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 11:22:05 --> Undefined variable $movielist
+in APPPATH\Views\admin\movieslist.php on line 44.
+ 1 APPPATH\Views\admin\movieslist.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $movielist', 'APPPATH\\Views\\admin\\movieslist.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\movieslist.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/movieslist', [], true)
+ 5 APPPATH\Controllers\Admin.php(139): view('admin/movieslist')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->movieslist()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 12:00:44 --> Undefined constant "id"
+in APPPATH\Views\admin\movieslist.php on line 46.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/movieslist', [], true)
+ 4 APPPATH\Controllers\Admin.php(145): view('admin/movieslist', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->movieslist()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 12:01:51 --> Undefined constant "id"
+in APPPATH\Views\admin\movieslist.php on line 46.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/movieslist', [], true)
+ 4 APPPATH\Controllers\Admin.php(145): view('admin/movieslist', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->movieslist()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 12:01:56 --> Undefined constant "id"
+in APPPATH\Views\admin\movieslist.php on line 46.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/movieslist', [], true)
+ 4 APPPATH\Controllers\Admin.php(145): view('admin/movieslist', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->movieslist()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 12:02:43 --> Undefined constant "id"
+in APPPATH\Views\admin\movieslist.php on line 46.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/movieslist', [], true)
+ 4 APPPATH\Controllers\Admin.php(145): view('admin/movieslist', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->movieslist()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 12:03:12 --> Undefined variable $admin
+in APPPATH\Controllers\Admin.php on line 216.
+ 1 APPPATH\Controllers\Admin.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Controllers\\Admin.php', 216)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->deleteproduct()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

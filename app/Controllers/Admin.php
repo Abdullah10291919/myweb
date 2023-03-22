@@ -26,15 +26,10 @@ class Admin extends BaseController {
             echo view('admin/template/footer');
         }else{
                 if(isset($_POST['email'])){
-
-
                     $userModel = new UserModel();
 
                     $email = $this->request->getPost('email');
                     $password = $this->request->getPost('password');
-            
-
-                
                     $user = $userModel->where('email', $email)->first();
                    
                     if ($user &&  $user['password'] == $password) {
@@ -128,6 +123,24 @@ class Admin extends BaseController {
     }
 
 
+    public function movieslist(){
+        
+        if($_GET['id']){
+            
+            $data  = array();
+            
+		$adminModel = new AdminModel();
+        $latestmovies =   $adminModel->where('catogery' , $_GET['id'])->findall();
+		   
+	 
+       
+            $data['movielist'] = $latestmovies;
+            echo view('admin/template/header');
+            echo view('admin/template/sidebar');
+            echo view('admin/movieslist' , $data);
+            echo view('admin/template/footer');
+        }
+    }
    
     public function addmovies()
 {
@@ -190,6 +203,28 @@ class Admin extends BaseController {
    
 }
 
+    public function deleteproduct(){
+        if(isset($_POST['id'])){
+         $adminModel = new AdminModel();
+          try{
+            $res = $adminModel->delete($_POST['id']);
+          }catch(Exception $ex){
+           echo  $ex.message;
+           exit;
+          }
+          $response = [
+                'message' => 'movie deleted successfully',
+                'success' => true
+            ];
+            echo json_encode($response);
+        }else{
+            $response = [
+                'message' => 'movie not found',
+                'success' => false
+            ];
+            echo json_encode($response);
+        }
+    }
     // function addmovies(){
     //     $adminModel = new AdminModel();
     //         if(isset($_POST['title'])){

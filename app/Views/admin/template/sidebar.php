@@ -14,7 +14,7 @@
                   <li class="back-btn">
                     <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
                   </li>
-                  <li  ><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>
+                  <li  ><a class="nav-link menu-title" href="<?php echo base_url()?>admins"><i data-feather="home"></i><span>Dashboard</span></a>
                     
                   </li>
                   <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="airplay"></i><span>Add Movie</span></a>
@@ -23,18 +23,19 @@
                      
                     </ul>
                   </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="airplay"></i><span>Catogeries</span></a>
+                  <!-- <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="airplay"></i><span>Catogeries</span></a>
                     <ul class="nav-submenu menu-content">
                       <li><a href="<?php echo base_url() ?>addcatogery">Add New category</a></li>
                       <li><a href="<?php echo base_url() ?>catogery">Category List</a></li>
                     </ul>
-                  </li>
+                  </li> -->
                   <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="layout"></i><span>Movies</span></a>
                     <ul class="nav-submenu menu-content">
-                      <li><a href="box-layout.html">Up Comming movies</a></li>
-                      <li><a href="layout-rtl.html">  Latest movies  </a></li>
-                      <li><a href="layout-dark.html">Most rated movied         </a></li>
-                      <li><a href="footer-light.html">TV shows</a></li>
+                      <li><a href="<?php echo base_url()?>movieslist?id=1">Up Comming movies</a></li>
+                      <li><a href="<?php echo base_url()?>movieslist?id=2">  Latest movies  </a></li>
+                      <li><a href="<?php echo base_url()?>movieslist?id=3">  Most Watched  </a></li>
+                      <li><a href="<?php echo base_url()?>movieslist?id=4">Most rated movied         </a></li>
+                      <li><a href="<?php echo base_url()?>movieslist?id=5">TV shows</a></li>
                        
                     </ul>
                   </li>

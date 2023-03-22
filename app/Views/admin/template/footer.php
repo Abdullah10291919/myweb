@@ -1,5 +1,5 @@
-  <!-- footer start-->
-  <footer class="footer">
+   <!-- footer start-->
+   <footer class="footer">
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 footer-copyright">
@@ -11,9 +11,6 @@
             </div>
           </div>
         </footer>
-        <!-- tap on top starts-->
-        <div class="tap-top"><i class="icon-control-eject"></i></div>
-        <!-- tap on tap ends-->
       </div>
     </div>
     <!-- latest jquery-->
@@ -28,7 +25,6 @@
     <script src="adminassets/assets/js/bootstrap/popper.min.js"></script>
     <script src="adminassets/assets/js/bootstrap/bootstrap.min.js"></script>
     <!-- Plugins JS start-->
-    <script src="adminassets/assets/js/chart/chartjs/chart.min.js"></script>
     <script src="adminassets/assets/js/chart/chartist/chartist.js"></script>
     <script src="adminassets/assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
     <script src="adminassets/assets/js/chart/morris-chart/raphael.js"></script>
@@ -43,10 +39,10 @@
     <script src="adminassets/assets/js/counter/jquery.counterup.min.js"></script>
     <script src="adminassets/assets/js/counter/counter-custom.js"></script>
     <script src="adminassets/assets/js/custom-card/custom-card.js"></script>
-    <script src="adminassets/assets/js/notify/bootstrap-notify.min.js"></script>
-    <script src="adminassets/assets/js/dashboard/default.js"></script>
-    <script src="adminassets/assets/js/notify/index.js"></script>
-    <script src="adminassets/assets/js/greeting.js"></script>
+    <script src="adminassets/assets/js/owlcarousel/owl.carousel.js"></script>
+    <script src="adminassets/assets/js/dashboard/dashboard_2.js"></script>
+    <script src="adminassets/assets/js/slick-slider/slick.min.js"></script>
+    <script src="adminassets/assets/js/slick-slider/slick-theme.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="adminassets/assets/js/theme-customizer/customizer.js"></script>
