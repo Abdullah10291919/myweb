@@ -30,7 +30,12 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+// $routes->get('/home', 'Home::index');
 
+$routes->post('/usersignup', 'Home::index');
+$routes->post('/usersignin', 'Home::index');
+
+$routes->get('/logout' , 'Home::logout');
 $routes->get('/latestmovies' , 'Home::latestmovies');
 $routes->get('/contactus' , 'Home::contactus');
 $routes->get('/contact-us' , 'Home::contactus');
@@ -57,9 +62,11 @@ $routes->get('/add_movies' , 'Admin::addmovies');
 $routes->post('/addMoviesdata' , 'Admin::addmovies');
 
 $routes->get('/movieslist' , 'Admin::movieslist');
+$routes->get('/userlist' , 'Admin::userlist');
 
 $routes->post('/deleteproduct' , 'Admin::deleteproduct');
- 
+$routes->post('/deleteuser' , 'Admin::deleteuser');
+
 
 
 // $routes->get('/registration' , 'Admin::registration');

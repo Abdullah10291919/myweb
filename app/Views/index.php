@@ -574,38 +574,7 @@
         <section class="subscribe bg-light2 ptb100">
             <div class="container">
 
-                <!-- Start of row -->
-                <div class="row justify-content-center">
-                    <div class="col-md-7 text-center">
-                        <h2 class="title">Join Movify Now!</h2>
-                        <h6 class="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing.</h6>
-                    </div>
-                </div>
-                <!-- End of row -->
-
-
-                <!-- Start of row -->
-                <div class="row justify-content-center">
-                    <div class="col-md-7 col-sm-10 col-12">
-
-                        <!-- Subscribe Form -->
-                        <form action="#" class="mailchimp mt50" novalidate>
-
-                            <!-- Form -->
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="email" name="EMAIL" class="form-control" id="mc-email" placeholder="Your Email" autocomplete="off">
-                                    <label for="mc-email"></label>
-                                    <button type="submit" class="btn btn-main btn-effect">Subscribe</button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-                <!-- End of row -->
-
-
+               
             </div>
         </section>
         <!-- =============== END OF SUBSCRIBE SECTION =============== -->
@@ -783,17 +752,19 @@
             <div class="small-dialog-content">
 
                 <!-- Start of Login form -->
-                <form id="cariera_login" method="post">
+                <form id="cariera_login" name="signin" action="<?php echo base_url()."usersignin" ?>"  method="post">
                     <p class="status"></p>
 
                     <div class="form-group">
-                        <label for="username">Username or Email *</label>
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Your Username or Email *" />
+                        <label for="username">Email *</label>
+                        <input type="text" class="form-control" id="username" name="signinemail" 
+                        placeholder="Your Username or Email *" />
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password *</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Your Password *" />
+                        <input type="password" class="form-control" id="password" name="signinpassword" 
+                        placeholder="Your Password *" />
                     </div>
 
                     <div class="form-group">
@@ -814,7 +785,7 @@
                         Not a member?
                         <a  class="signUpClick">Sign up</a>
                     </span>
-                    <a  class="forgetPasswordClick pull-right">Forgot Password</a>
+                    <!-- <a  class="forgetPasswordClick pull-right">Forgot Password</a> -->
                 </div>
             </div>
 
@@ -832,22 +803,22 @@
             <div class="small-dialog-content">
 
                 <!-- Start of Registration form -->
-                <form id="cariera_registration" action="#" method="POST">
+                <form id="cariera_registration" name="signup" action="<?php echo base_url()."usersignup" ?>" method="POST">
                     <p class="status"></p>
 
                     <div class="form-group">
                         <label for="movify_user_login">Username</label>
-                        <input name="movify_user_login" id="movify_user_login" class="form-control" type="text"/>
+                        <input name="username" id="movify_user_login" class="form-control" type="text"/>
                     </div>
 
                     <div class="form-group">
                         <label for="movify_user_email">Email</label>
-                        <input name="movify_user_email" id="movify_user_email" class="form-control" type="email"/>
+                        <input name="email" id="movify_user_email" class="form-control" type="email"/>
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input name="movify_user_pass" id="movify_password" class="form-control" type="password"/>
+                        <input name="password" id="movify_password" class="form-control" type="password"/>
                     </div>
 
                     <div class="form-group">
@@ -862,7 +833,7 @@
                         <a class="signInClick">Sign in</a>
                     </span>
 
-                    <a class="forgetPasswordClick pull-right">Forgot Password</a>
+                    <!-- <a class="forgetPasswordClick pull-right">Forgot Password</a> -->
                 </div>
 
             </div> <!-- .small-dialog-content -->

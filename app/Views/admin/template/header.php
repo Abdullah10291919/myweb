@@ -38,9 +38,11 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>adminassets/assets/css/style.css">
     <link id="color" rel="stylesheet" href="<?php echo base_url(); ?>adminassets/assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>adminassets/assets/css/responsive.css">
   </head>
-  <body>
+  <body ng-app="myApp" ng-controller="myCtrl">
     <!-- Loader starts-->
     <div class="loader-wrapper">
       <div class="main-loader">
@@ -63,18 +65,18 @@
           </div>
           <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="align-center" id="sidebar-toggle"></i></div>
           <div class="left-menu-header col">
-            <ul>
+            <!-- <ul>
               <li>
                 <form class="form-inline search-form">
                   <div class="search-bg"><i class="fa fa-search"></i></div>
                   <input class="form-control-plaintext" placeholder="Search here.....">
                 </form><span class="d-sm-none mobile-search search-bg"><i class="fa fa-search"></i></span>
               </li>
-            </ul>
+            </ul> -->
           </div>
           <div class="nav-right col pull-right right-menu">
             <ul class="nav-menus">
-              <li class="onhover-dropdown">
+              <!-- <li class="onhover-dropdown">
                 <div class="notification-box"><i data-feather="shopping-bag"></i><span class="badge badge-pill badge-secondary">4</span></div>
                 <div class="notification-dropdown cart onhover-show-div">
                   <div class="m-3">
@@ -218,18 +220,12 @@
                   <div class="m-3"><a class="btn btn-light w-100" href="chat.html">View all</a></div>
                 </div>
               </li>
-              <li>
-                <div class="mode"><i class="fa fa-moon-o"></i></div>
-              </li>
+              -->
               <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
               <li class="onhover-dropdown">
                 <div class="media profile-media"><img class="rounded-circle" src="<?php echo base_url(); ?>adminassets/assets/images/avtar/emoji/9.png" alt=""></div>
                 <ul class="profile-dropdown onhover-show-div">
-                  <li><a href="user-profile.html"><i data-feather="user"></i><span>Account </span></a></li>
-                  <li><a href="user-profile.html"><i data-feather="mail"></i><span>Inbox</span></a></li>
-                  <li><a href="kanban.html"><i data-feather="file-text"></i><span>Taskboard</span></a></li>
-                  <li><a href="edit-profile.html"><i data-feather="settings"></i><span>Settings</span></a></li>
-                  <li><a class="btn btn-light w-100" href="login.html"><i data-feather="log-in"></i>Log out</a></li>
+                   <li><a class="btn btn-light w-100" href="login.html"><i data-feather="log-in"></i>Log out</a></li>
                 </ul>
               </li>
             </ul>

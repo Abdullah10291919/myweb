@@ -41,8 +41,8 @@
                   </li>
                   <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="box"></i><span>Users  </span></a>
                     <ul class="nav-submenu menu-content">
-                      <li><a href="projects.html">Verified Users</a></li>
-                      <li><a href="projectcreate.html">blocked users</a></li>
+                      <li><a href="<?php echo base_url(); ?>userlist">Verified Users</a></li>
+                      <!-- <li><a href="projectcreate.html">blocked users</a></li> -->
                     </ul>
                   </li>
                   </ul>

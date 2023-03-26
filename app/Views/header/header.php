@@ -208,19 +208,26 @@
                             </li> -->
 
                             <!-- Menu Item -->
-                            <!-- <li class="nav-item notification-wrapper">
-                                <a class="nav-link notification" href="#">
-                                    <i class="fa fa-globe"></i>
-                                    <span class="notification-count">2</span>
-                                </a>
-                            </li> -->
+                            <li class="nav-item notification-wrapper">
+                            <?php if (session()->has('reponse')): ?>
+                  <div class="alert alert-success"><?php echo session('reponse');
+         ?></div>
+              <?php endif; ?>
+                            </li>
 
                             <!-- Menu Item -->
                             <li class="nav-item m-auto">
-                                <a href="#login-register-popup" class="btn btn-main btn-effect login-btn popup-with-zoom-anim">
-                                    <i class="icon-user"></i>login
-                                </a>
-                            </li>
+                        <?php if(session()->get('userLogin')): ?>
+                            <a href="<?php echo base_url('logout'); ?>" class="btn btn-main">
+                                <i class="icon-user"></i>Logout
+                            </a>
+                        <?php else: ?>
+                            <a href="#login-register-popup" class="btn btn-main btn-effect login-btn popup-with-zoom-anim">
+                                <i class="icon-user"></i>Login
+                            </a>
+                        <?php endif; ?>
+                    </li>
+
                         </ul>
                         <!-- ====== End of Extra Nav ====== -->
 
@@ -232,3 +239,4 @@
             </div>
         </header>
         <!-- =============== END OF HEADER NAVIGATION =============== -->
+      

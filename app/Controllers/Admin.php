@@ -5,25 +5,40 @@ use App\Models\UserModel;
 use App\Models\AdminModel;
 
 class Admin extends BaseController {
-
-
-    // function __construct()
-    // {
-	 
-	//    
-    
-	// }
+ 
 
     public function login(){
 
+
+        $data = array();
+        $adminModel = new AdminModel();
+        $latestmovies =   $adminModel->where('catogery' , 1)->countAllResults();
+       
+        $adminModel = new AdminModel();
+        $upcomming =   $adminModel->where('catogery' , 2)->countAllResults();
+       
+        $adminModel = new AdminModel();
+        $mostlike =   $adminModel->where('catogery' , 3)->countAllResults();
+       
+        $adminModel = new AdminModel();
+        $mostWatch =   $adminModel->where('catogery' , 4)->countAllResults();
+       
+        $adminModel = new AdminModel();
+        $tvshow =   $adminModel->where('catogery' , 5)->countAllResults();
+       
+        $data['totallatestMovie'] = $latestmovies;
+        $data['upcomming'] = $upcomming;
+        $data['mostlike'] = $mostlike;
+        $data['mostWatch'] = $mostWatch;
+        $data['tvshow'] = $tvshow;
         $session = session();
            if(isset($_SESSION['adminlogin'])){
-            // print_r('adminis login');
-          
+           
             echo view('admin/template/header');
             echo view('admin/template/sidebar');
-            echo view('admin/dashboard');
+            echo view('admin/dashboard' , $data);
             echo view('admin/template/footer');
+            // exit;
         }else{
                 if(isset($_POST['email'])){
                     $userModel = new UserModel();
@@ -37,7 +52,7 @@ class Admin extends BaseController {
                         $session->set('adminlogin' , $user['email']);
                         echo view('admin/template/header');
                         echo view('admin/template/sidebar');
-                        echo view('admin/dashboard');
+                        echo view('admin/dashboard' , $data);
                         echo view('admin/template/footer');
                     } else {
                         // Failed login
@@ -141,7 +156,22 @@ class Admin extends BaseController {
             echo view('admin/template/footer');
         }
     }
-   
+    public function userlist(){
+        
+        
+            
+            $data  = array();
+         
+        $userModel = new UserModel();
+             $user = $userModel->findall();
+        
+          $data['userlist'] =  $user;
+            echo view('admin/template/header');
+            echo view('admin/template/sidebar');
+            echo view('admin/userlist' , $data);
+            echo view('admin/template/footer');
+        
+    }
     public function addmovies()
 {
     $adminModel = new AdminModel();
@@ -225,6 +255,29 @@ class Admin extends BaseController {
             echo json_encode($response);
         }
     }
+    public function deleteuser(){
+        if(isset($_POST['id'])){
+         $adminModel = new UserModel();
+          try{
+            $res = $adminModel->delete($_POST['id']);
+          }catch(Exception $ex){
+           echo  $ex.message;
+           exit;
+          }
+          $response = [
+                'message' => 'user deleted successfully',
+                'success' => true
+            ];
+            echo json_encode($response);
+        }else{
+            $response = [
+                'message' => 'user not found',
+                'success' => false
+            ];
+            echo json_encode($response);
+        }
+    }
+    
     // function addmovies(){
     //     $adminModel = new AdminModel();
     //         if(isset($_POST['title'])){
