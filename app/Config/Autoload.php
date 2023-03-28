@@ -61,7 +61,10 @@ class Autoload extends AutoloadConfig
      *
      * @var array<string, string>
      */
-    public $classmap = [];
+    public $classmap = [
+        'Upload' => APPPATH . 'Libraries/Upload.php',
+    ];
+ 
 
     /**
      * -------------------------------------------------------------------
@@ -79,7 +82,7 @@ class Autoload extends AutoloadConfig
      * @var string[]
      * @phpstan-var list<string>
      */
-    public $files = [];
+    public $files = ['upload'];
 
     /**
      * -------------------------------------------------------------------
@@ -93,5 +96,5 @@ class Autoload extends AutoloadConfig
      * @var string[]
      * @phpstan-var list<string>
      */
-    public $helpers = [];
+    public $helpers = ['upload'];
 }

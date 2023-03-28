@@ -1,0 +1,172 @@
+CRITICAL - 2023-03-16 17:41:39 --> syntax error, unexpected identifier "released"
+in APPPATH\Views\index.php on line 273.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(25): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 17:43:23 --> syntax error, unexpected identifier "released"
+in APPPATH\Views\index.php on line 273.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(25): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 18:41:58 --> Undefined array key "image"
+in APPPATH\Controllers\Admin.php on line 136.
+ 1 APPPATH\Controllers\Admin.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "image"', 'APPPATH\\Controllers\\Admin.php', 136)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 18:47:19 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 146.
+ 1 APPPATH\Controllers\Admin.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 146)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 18:51:03 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 146.
+ 1 APPPATH\Controllers\Admin.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 146)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 18:51:17 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 146.
+ 1 APPPATH\Controllers\Admin.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 146)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 18:55:17 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 146.
+ 1 APPPATH\Controllers\Admin.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 146)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 18:55:28 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 146.
+ 1 APPPATH\Controllers\Admin.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 146)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 18:58:03 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 147.
+ 1 APPPATH\Controllers\Admin.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 147)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:06:46 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 147.
+ 1 APPPATH\Controllers\Admin.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 147)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:08:50 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 147.
+ 1 APPPATH\Controllers\Admin.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 147)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:08:59 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 147.
+ 1 APPPATH\Controllers\Admin.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 147)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:11:19 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 147.
+ 1 APPPATH\Controllers\Admin.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 147)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:12:04 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 147.
+ 1 APPPATH\Controllers\Admin.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 147)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:13:04 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 147.
+ 1 APPPATH\Controllers\Admin.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 147)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:13:58 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 148.
+ 1 APPPATH\Controllers\Admin.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 148)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:14:11 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 148.
+ 1 APPPATH\Controllers\Admin.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 148)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:17:39 --> Undefined property: App\Controllers\Admin::$load
+in APPPATH\Controllers\Admin.php on line 148.
+ 1 APPPATH\Controllers\Admin.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$load', 'APPPATH\\Controllers\\Admin.php', 148)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:18:59 --> Call to a member function move() on null
+in APPPATH\Controllers\Admin.php on line 150.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:20:04 --> Call to a member function move() on null
+in APPPATH\Controllers\Admin.php on line 150.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->addmovies()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:22:18 --> Cannot call constructor
+in APPPATH\Controllers\Admin.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:23:36 --> Cannot call constructor
+in APPPATH\Controllers\Admin.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:27:55 --> Cannot call constructor
+in APPPATH\Controllers\Admin.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:27:59 --> Cannot call constructor
+in APPPATH\Controllers\Admin.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 19:28:15 --> Cannot call constructor
+in APPPATH\Controllers\Admin.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
