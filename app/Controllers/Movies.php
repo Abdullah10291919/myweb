@@ -11,7 +11,7 @@ class Movies extends BaseController
 	{
 		$data = array();
 		
-		$data['title'] ='Up Comming';
+		$data['title'] ='Up Coming';
 		$adminModel = new AdminModel();
         $latestmovies =   $adminModel->where('catogery' ,1)->limit(30)->findall();
 	   

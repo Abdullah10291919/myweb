@@ -159,7 +159,7 @@
                                 <ul class="dropdown-menu">
                                     <!-- Menu Item -->
                                     <li>
-                                        <a class="dropdown-item" href="<?php echo base_url() ?>upcomming">Up Comming</a>
+                                        <a class="dropdown-item" href="<?php echo base_url() ?>upcomming">Up Coming</a>
                                     </li>
 
                                     <!-- Menu Item -->

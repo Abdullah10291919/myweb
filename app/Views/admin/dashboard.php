@@ -79,7 +79,7 @@
                               <div class="media-body">
                                 <ul class="widget-card">
                                   <li><img class="img-fluid me-2" src="../assets/images/dashboard-2/p_1.png"
-                                   alt="Image description"><span class="font-primary">Up Comming</span></li>
+                                   alt="Image description"><span class="font-primary">Up Coming</span></li>
                                   <li>
                                     <h4 class="counter"><?= $upcomming ?></h4>
                                   </li>

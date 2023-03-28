@@ -31,7 +31,7 @@
                   </li> -->
                   <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="layout"></i><span>Movies</span></a>
                     <ul class="nav-submenu menu-content">
-                      <li><a href="<?php echo base_url()?>movieslist?id=1">Up Comming movies</a></li>
+                      <li><a href="<?php echo base_url()?>movieslist?id=1">Up Coming movies</a></li>
                       <li><a href="<?php echo base_url()?>movieslist?id=2">  Latest movies  </a></li>
                       <li><a href="<?php echo base_url()?>movieslist?id=3">  Most Watched  </a></li>
                       <li><a href="<?php echo base_url()?>movieslist?id=4">Most rated movied         </a></li>
