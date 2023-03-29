@@ -1,0 +1,253 @@
+ERROR - 2023-03-28 12:07:01 --> Error connecting to the database: mysqli_sql_exception: Access denied for user '2109134'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', '2109134', Object(SensitiveParameterValue), 'db2109134', 3306, '', 0)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8.2\htdocs\movies\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8.2\htdocs\movies\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp8.2\htdocs\movies\app\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp8.2\htdocs\movies\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp8.2\htdocs\movies\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp8.2\htdocs\movies\app\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-28 12:07:01 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `movies`
+WHERE `catogery` = :catogery:', [...], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-28 12:07:09 --> Error connecting to the database: mysqli_sql_exception: Access denied for user '2109134'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', '2109134', Object(SensitiveParameterValue), 'db2109134', 3306, '', 0)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8.2\htdocs\movies\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8.2\htdocs\movies\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp8.2\htdocs\movies\app\Controllers\Movies.php(75): CodeIgniter\BaseModel->first()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Movies->details()
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+#9 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp8.2\htdocs\movies\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp8.2\htdocs\movies\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\xampp8.2\htdocs\movies\app\Controllers\Movies.php(75): CodeIgniter\BaseModel->first()
+#6 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Movies->details()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-28 12:07:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `movies`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Movies.php(75): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movies->details()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-28 12:07:10 --> Error connecting to the database: mysqli_sql_exception: Access denied for user '2109134'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', '2109134', Object(SensitiveParameterValue), 'db2109134', 3306, '', 0)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8.2\htdocs\movies\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8.2\htdocs\movies\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp8.2\htdocs\movies\app\Controllers\Movies.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Movies->upcomming()
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+#9 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp8.2\htdocs\movies\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp8.2\htdocs\movies\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp8.2\htdocs\movies\app\Controllers\Movies.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Movies->upcomming()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-28 12:07:10 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `movies`
+WHERE `catogery` = :catogery:', [...], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Movies.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Movies->upcomming()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Movies))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-28 12:07:17 --> Error connecting to the database: mysqli_sql_exception: Access denied for user '2109134'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', '2109134', Object(SensitiveParameterValue), 'db2109134', 3306, '', 0)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8.2\htdocs\movies\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8.2\htdocs\movies\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp8.2\htdocs\movies\app\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp8.2\htdocs\movies\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp8.2\htdocs\movies\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp8.2\htdocs\movies\app\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-28 12:07:17 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `movies`
+WHERE `catogery` = :catogery:', [...], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-28 12:38:27 --> Error connecting to the database: mysqli_sql_exception: Access denied for user '2109134'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', '2109134', Object(SensitiveParameterValue), 'db2109134', 3306, '', 0)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8.2\htdocs\movies\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8.2\htdocs\movies\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp8.2\htdocs\movies\app\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp8.2\htdocs\movies\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp8.2\htdocs\movies\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp8.2\htdocs\movies\app\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-28 12:38:27 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `movies`
+WHERE `catogery` = :catogery:', [...], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-28 13:02:30 --> Error connecting to the database: mysqli_sql_exception: Access denied for user '2109134'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', '2109134', Object(SensitiveParameterValue), 'db2109134', 3306, '', 0)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8.2\htdocs\movies\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8.2\htdocs\movies\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp8.2\htdocs\movies\app\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp8.2\htdocs\movies\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp8.2\htdocs\movies\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp8.2\htdocs\movies\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp8.2\htdocs\movies\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp8.2\htdocs\movies\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp8.2\htdocs\movies\app\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp8.2\htdocs\movies\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8.2\htdocs\movies\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-03-28 13:02:30 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `movies`
+WHERE `catogery` = :catogery:', [...], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(61): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
