@@ -125,29 +125,16 @@
                                 <ul class="dropdown-menu">
                                     <!-- Menu Item -->
                                     
-
-                                   
-                                   
-
                                     <!-- Menu Item -->
                                     <li>
                                         <a class="dropdown-item" href="<?php echo base_url() ?>contact-us">Contact us</a>
                                     </li>
 
-                                    <!-- Menu Item -->
-                                    <!-- <li>
-                                        <a class="dropdown-item" href="<?php echo base_url() ?>coming-soon">Coming soon</a>
-                                    </li> -->
-
-                                  <!-- Menu Item -->
+                                   <!-- Menu Item
                                     <li>
                                         <a class="dropdown-item" href="<?php echo base_url() ?>login-register">Login - Register</a>
-                                    </li>
+                                    </li> -->
                                     
-                                    <!-- Menu Item -->
-                                    <li>
-                                        <a class="dropdown-item" href="<?php echo base_url() ?>testimonials">Testimonials</a>
-                                    </li>
                                 </ul>
                             </li>
 
@@ -215,18 +202,18 @@
               <?php endif; ?>
                             </li>
 
-                            <!-- Menu Item -->
-                            <li class="nav-item m-auto">
-                        <?php if(session()->get('userLogin')): ?>
-                            <a href="<?php echo base_url('logout'); ?>" class="btn btn-main">
+                       <!-- Menu Item -->
+                            <!-- <li class="nav-item m-auto"> -->
+                        <!-- <?php if(session()->get('userLogin')): ?> -->
+                            <!-- <a href="<?php echo base_url('logout'); ?>" class="btn btn-main">
                                 <i class="icon-user"></i>Logout
-                            </a>
-                        <?php else: ?>
-                            <a href="#login-register-popup" class="btn btn-main btn-effect login-btn popup-with-zoom-anim">
+                            </a> -->
+                        <!-- <?php else: ?> -->
+                            <!-- <a href="#login-register-popup" class="btn btn-main btn-effect login-btn popup-with-zoom-anim">
                                 <i class="icon-user"></i>Login
-                            </a>
-                        <?php endif; ?>
-                    </li>
+                            </a> -->
+                        <!-- <?php endif; ?> -->
+                    <!-- </li> -->
 
                         </ul>
                         <!-- ====== End of Extra Nav ====== -->
