@@ -26,13 +26,13 @@
 
 
                     <!-- Start of Contact Details -->
-                    <div class="col-md-4 col-sm-12">
+                    <div class="col-md-12 col-sm-12">
                         <h3 class="title">Info</h3>
 
                         <div class="details-wrapper">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
 
-                            <ul class="contact-details">
+                            <ul class="contact-details ">
                                 <li>
                                     <i class="icon-phone"></i>
                                     <strong>Phone:</strong>
@@ -46,7 +46,7 @@
                                 <li>
                                     <i class="icon-globe"></i>
                                     <strong>Web:</strong>
-                                    <span><a href="#">www.movify.com</a></span>
+                                    <span><a href="#">https://mi-linux.wlv.ac.uk/~2109134/myweb/public/</a></span>
                                 </li>
                                 <li>
                                     <i class="icon-paper-plane"></i>
@@ -60,44 +60,7 @@
 
 
                     <!-- Start of Contact Form -->
-                    <div class="col-md-8 col-sm-12">
-                        <h3 class="title">Contact Form</h3>
-
-                        <!-- Start of Contact Form -->
-                        <form id="contact-form">
-
-                            <!-- contact result -->
-                            <div id="contact-result"></div>
-                            <!-- end of contact result -->
-
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <input class="form-control input-box" type="text" name="name" placeholder="Your Name" autocomplete="off">
-                            </div>
-
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <input class="form-control input-box" type="email" name="email" placeholder="your-email@movify.com" autocomplete="off">
-                            </div>
-
-
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <input class="form-control input-box" type="text" name="subject" placeholder="Subject" autocomplete="off">
-                            </div>
-
-                            <!-- Form Group -->
-                            <div class="form-group mb20">
-                                <textarea class="form-control textarea-box" rows="8" name="message" placeholder="Type your message..."></textarea>
-                            </div>
-
-                            <!-- Form Group -->
-                            <div class="form-group text-center">
-                                <button class="btn btn-main btn-effect" type="submit">Send message</button>
-                            </div>
-                        </form>
-                        <!-- End of Contact Form -->
-                    </div>
+                    
                     <!-- Start of Contact Form -->
 
                 </div>
@@ -123,7 +86,9 @@
                                 <img src="<?php echo base_url(); ?>assets/images/logo.svg" alt="logo" class="logo">
                                 <!-- INSERT YOUR WHITE LOGO HERE -->
                                 <img src="<?php echo base_url(); ?>assets/images/logo-white.svg" alt="white logo" class="logo-white">
-                                <p class="nomargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ducimus, atque. Praesentium suscipit provident explicabo dignissimos nostrum numquam deserunt earum accusantium et fugit.</p>
+                                <p class="nomargin">
+                                 Experience the magic of movies like never before with Moviefy - your ultimate destination for cinematic entertainment!""Experience the magic of movies like never before with Moviefy - your ultimate destination for cinematic entertainment!                            
+                             </p>
                             </div>
                         </div>
                         <!-- End of Widget 1 -->
@@ -134,11 +99,11 @@
                                 <h4 class="widget-title">Useful links</h4>
 
                                 <ul class="general-listing">
-                                    <li><a href="#">about movify</a></li>
-                                    <li><a href="#">blog</a></li>
-                                    <li><a href="#">forum</a></li>
-                                    <li><a href="#">my account</a></li>
-                                    <li><a href="#">watch list</a></li>
+                                    <li><a href="<?php echo base_url() ?>">about movify</a></li>
+                                    <li><a href="<?php echo base_url() ?>mostwatched">Most Watched</a></li>
+                                    <li><a href="<?php echo base_url() ?>tvshows">Most Liked</a></li>
+                                    <li><a href="<?php echo base_url() ?>upcomming">Up Coming</a></li>
+                                    <li><a href="<?php echo base_url() ?>latest">latest</a></li>
                                 </ul>
 
                             </div>
@@ -146,7 +111,7 @@
                         <!-- End of Widget 2 -->
 
                         <!-- Start of Widget 3 -->
-                        <div class="col-lg-3 col-md-6 col-sm-12">
+                        <!-- <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="widget widget-blog">
                                 <h4 class="widget-title">latest news</h4>
 
@@ -156,7 +121,7 @@
                                     <li><a href="#">blog post 3</a><small>januar 13, 2018</small></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End of Widget 3 -->
 
                         <!-- Start of Widget 4 -->
@@ -164,13 +129,13 @@
                             <div class="widget widget-social">
                                 <h4 class="widget-title">follow us</h4>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ducimus, atque.</p>
+                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ducimus, atque.</p> -->
 
                                 <!-- Start of Social Buttons -->
                                 <ul class="social-btns">
                                     <!-- Social Media -->
                                     <li>
-                                        <a href="#" class="social-btn-roll facebook">
+                                        <a href="www.fb.com" class="social-btn-roll facebook">
                                             <div class="social-btn-roll-icons">
                                                 <i class="social-btn-roll-icon fa fa-facebook"></i>
                                                 <i class="social-btn-roll-icon fa fa-facebook"></i>
@@ -180,7 +145,7 @@
 
                                     <!-- Social Media -->
                                     <li>
-                                        <a href="#" class="social-btn-roll twitter">
+                                        <a href="www.twitter.com" class="social-btn-roll twitter">
                                             <div class="social-btn-roll-icons">
                                                 <i class="social-btn-roll-icon fa fa-twitter"></i>
                                                 <i class="social-btn-roll-icon fa fa-twitter"></i>
@@ -188,19 +153,10 @@
                                         </a>
                                     </li>
 
+                                    
                                     <!-- Social Media -->
                                     <li>
-                                        <a href="#" class="social-btn-roll google-plus">
-                                            <div class="social-btn-roll-icons">
-                                                <i class="social-btn-roll-icon fa fa-google-plus"></i>
-                                                <i class="social-btn-roll-icon fa fa-google-plus"></i>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <!-- Social Media -->
-                                    <li>
-                                        <a href="#" class="social-btn-roll instagram">
+                                        <a href="www.instagram.com" class="social-btn-roll instagram">
                                             <div class="social-btn-roll-icons">
                                                 <i class="social-btn-roll-icon fa fa-instagram"></i>
                                                 <i class="social-btn-roll-icon fa fa-instagram"></i>
